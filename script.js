@@ -15,15 +15,45 @@ let cpuMove = moves[Math.floor(Math.random()*moves.length)];
 //Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
 let options = ["Rock", "Paper", "Scissor"];
 
+function popNoSelection(){
+    document.getElementById("human-selection").innerHTML = "No option selected."
+};
+document.getElementById("none").addEventListener("click", popNoSelection);
+
 function popRock(){
     document.getElementById("human-selection").innerHTML = "Rock"
 };
 /** document.getElementById("rock").addEventListener  **/
-
-let selection1 = document.getElementById(rock);
 document.getElementById("rock").addEventListener("click", popRock);
 
-//humanSelection.onclick(popRock);
+
+function popPaper(){
+    document.getElementById("human-selection").innerHTML = "Paper"
+};
+document.getElementById("paper").addEventListener("click", popPaper);
+
+
+function popScissor(){
+    document.getElementById("human-selection").innerHTML = "Scissor"
+};
+document.getElementById("scissor").addEventListener("click", popScissor);
+
+
+
+function popCpuText(){
+    if (cpuMove == "rock"){
+        document.getElementById("cpu-selection").innerHTML = "Rock"
+    }
+    else if (cpuMove == "paper"){
+        document.getElementById("cpu-selection").innerHTML = "Paper"
+    }
+    else if (cpuMove == "scissor"){
+        document.getElementById("cpu-selection").innerHTML = "Scissor"
+    }
+};
+
+document.getElementById("input").addEventListener("click", popCpuText);
+
 
 
 
