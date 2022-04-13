@@ -8,23 +8,22 @@
 
 <body>
     
-    Select your option.
-    <p>
-
-    </p>
-
+   
     <form>
         <h2>Round 1</h2>
         <select id="form">
-            <option id="rock">Rock</option>
-            <option id="paper">Paper</option>
-            <option id="scissor">Scissor</option>
+            <option>Select an option.</option>
+            <option id="rock" value="1">Rock</option>
+            <option id="paper" value="2">Paper</option>
+            <option id="scissor" value="3">Scissor</option>
         </select>
-        Your selection: <p id="human-selection"></p>
+        <p>Your selection: </p> 
+        <h4 id="human-selection"></h4>
     <br>
 
-    <input type="button"  onclick="" value="CPU's turn."></button>
-    CPU's selection: <p id="cpu-selection"></p>
+    <input type="button"  onclick="" value="Click for CPU's move."></button>
+    <p>CPU's selection: </p> 
+    <h4 id="cpu-selection"></h4>
     <br>
     </form>
 

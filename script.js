@@ -13,11 +13,26 @@ let cpuMove = moves[Math.floor(Math.random()*moves.length)];
  //the round like so: "You Lose! Paper beats Rock"
 
 //Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
-    let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor beats paper!", "Stalemate!"];
+let options = ["Rock", "Paper", "Scissor"];
+
+function popRock(){
+    document.getElementById("human-selection").innerHTML = "Rock"
+};
+/** document.getElementById("rock").addEventListener  **/
+
+let selection1 = document.getElementById(rock);
+document.getElementById("rock").addEventListener("click", popRock);
+
+//humanSelection.onclick(popRock);
 
 
 
-    function firstBranch (playerSelection, computerSelection){
+
+let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor beats paper!", "Stalemate!"];
+
+
+
+    function firstRound (playerSelection, computerSelection){
         if (playerSelection == document.getElementById(rock) && computerSelection == "paper") {
             return ("You lose! " + possibleOutcomes[1]);
         }
@@ -46,14 +61,18 @@ let cpuMove = moves[Math.floor(Math.random()*moves.length)];
             return ("You lose! " + possibleOutcomes[0]);
         }   
     }
-    let playerSelection = document.getElementById(rock);
-    let playerSelection2 = document.getElementById(paper);
-    let playerSelection3 = document.getElementById(scissor);
+    let playerSelection = document.getElementById(form);
+   /**  let playerSelection2 = document.getElementById(paper);
+    let playerSelection3 = document.getElementById(scissor); **/
     let computerSelection = cpuMove;
 
-   console.log(firstBranch(playerSelection, computerSelection));
-   console.log(firstBranch(playerSelection2, computerSelection));
-   console.log(firstBranch(playerSelection3, computerSelection));
+   console.log(firstRound(playerSelection, computerSelection));
+   /**console.log(firstBranch(playerSelection2, computerSelection));
+   console.log(firstBranch(playerSelection3, computerSelection));**/
 
-
-
+function loopRound(){
+    for (let i = 0; i < 5; i++) {
+    console.log(firstRound(playerSelection, computerSelection));
+    }
+}
+loopRound();
