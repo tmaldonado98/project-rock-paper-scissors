@@ -91,22 +91,20 @@ let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor be
         }   
         return result
     }
-
-
     let playerSelection = document.getElementById(form);
-
     let computerSelection = cpuMove;
-console.log(firstRound(playerSelection, computerSelection));
+    document.getElementById("round-result").innerHTML = firstRound(playerSelection, computerSelection);
 
 
-    function round1Result () {
+  /**   function round1Result () {
         document.getElementById("input").addEventListener("click", writeResult);
     }
 
     function writeResult (){
         document.getElementById("round-result").innerHTML = firstRound();
-    }
-
+    } 
+       **/
+      
 //function roundResult (){
   //  round1.innerHTML
 
