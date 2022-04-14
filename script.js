@@ -1,6 +1,6 @@
 //o begin with a function called computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’. We’ll use this function in the game to make the computer’s play. Tip: use the console to make sure this is returning the expected output before moving to the next step!
 
-let moves = ["rock", "paper", "scissor"]; 
+let moves = ["Rock", "Paper", "Scissor"]; 
 //function computerPlay(){}
 
 
@@ -53,15 +53,31 @@ function popCpuText(){
 document.getElementById("input").addEventListener("click", popCpuText);
 
 
+function storePopCpuTextResults (){
+    let computerSelection;
+    if (document.getElementById("cpu-selection").innerHTML == "Rock"){
+        computerSelection = "Rock"
+    }
 
+
+}
+
+
+function storePopHumanText (){
+    let playerSelection; 
+    if (document.getElementById("human-selection").innerHTML == "Rock"){
+        playerSelection = "Rock"
+    }
+     
+}
 
 
 let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor beats paper!", "Stalemate!"];
 
 
-    function firstRound (playerSelection, computerSelection){
+    function firstRound (){
         let result;
-        if (playerSelection == document.getElementById(rock) && computerSelection == "paper") {
+        if (playerSelection == "Rock" && computerSelection == "paper") {
            result = "You lose! " + possibleOutcomes[1];
         }
         else if (playerSelection == document.getElementById(paper) && computerSelection == "paper"){
@@ -93,6 +109,11 @@ let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor be
     }
     let playerSelection = document.getElementById(form);
     let computerSelection = cpuMove;
+    
+    
+    function displayResultsAfterInputs(){
+        if ()
+    }    
     document.getElementById("round-result").innerHTML = firstRound(playerSelection, computerSelection);
 
 
@@ -104,7 +125,7 @@ let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor be
         document.getElementById("round-result").innerHTML = firstRound();
     } 
        **/
-      
+
 //function roundResult (){
   //  round1.innerHTML
 
