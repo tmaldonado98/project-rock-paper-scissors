@@ -12,18 +12,17 @@ let cpuMove = moves[Math.floor(Math.random()*moves.length)];
 //the playerSelection and computerSelection - and then return a string that declares the winner of
  //the round like so: "You Lose! Paper beats Rock"
 
-//Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
 let options = ["Rock", "Paper", "Scissor"];
 
-function popNoSelection(){
+/**function popNoSelection(){
     document.getElementById("human-selection").innerHTML = "No option selected."
 };
-document.getElementById("none").addEventListener("click", popNoSelection);
+document.getElementById("none").addEventListener("click", popNoSelection);**/
+
 
 function popRock(){
     document.getElementById("human-selection").innerHTML = "Rock"
 };
-/** document.getElementById("rock").addEventListener  **/
 document.getElementById("rock").addEventListener("click", popRock);
 
 
@@ -51,7 +50,6 @@ function popCpuText(){
         document.getElementById("cpu-selection").innerHTML = "Scissor"
     }
 };
-
 document.getElementById("input").addEventListener("click", popCpuText);
 
 
@@ -61,48 +59,65 @@ document.getElementById("input").addEventListener("click", popCpuText);
 let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor beats paper!", "Stalemate!"];
 
 
-
     function firstRound (playerSelection, computerSelection){
+        let result;
         if (playerSelection == document.getElementById(rock) && computerSelection == "paper") {
-            return ("You lose! " + possibleOutcomes[1]);
+           result = "You lose! " + possibleOutcomes[1];
         }
         else if (playerSelection == document.getElementById(paper) && computerSelection == "paper"){
-            return possibleOutcomes[3];
+            result =  possibleOutcomes[3];
         }
         else if (playerSelection == document.getElementById(scissor) && computerSelection == "paper" ){
-            return ("You win! " + possibleOutcomes[2]);
+            result =  ("You win! " + possibleOutcomes[2]);
         }
         else if (playerSelection == document.getElementById(rock) && computerSelection == "scissor") {
-            return ("You win! " + possibleOutcomes[0]);
+            result =  ("You win! " + possibleOutcomes[0]);
         }
         else if (playerSelection == document.getElementById(paper) && computerSelection == "scissor"){
-            return ("You lose! " + possibleOutcomes[2]);
+            result =  ("You lose! " + possibleOutcomes[2]);
         }
         else if (playerSelection == document.getElementById(scissor) && computerSelection == "scissor" ){
-            return possibleOutcomes[3];
+            result =  possibleOutcomes[3];
+            return result
         }
         else if (playerSelection == document.getElementById(rock) && computerSelection == "rock") {
-            return possibleOutcomes[3];
+            result =  possibleOutcomes[3];
         }
         else if (playerSelection == document.getElementById(paper) && computerSelection == "rock"){
-            return "You win! " + possibleOutcomes[1];
+            result =  ("You win! " + possibleOutcomes[1]);
         }
         else if (playerSelection == document.getElementById(scissor) && computerSelection == "rock" ){
-            return ("You lose! " + possibleOutcomes[0]);
+            result =  ("You lose! " + possibleOutcomes[0]);
         }   
+        return result
     }
-    let playerSelection = document.getElementById(form);
-   /**  let playerSelection2 = document.getElementById(paper);
-    let playerSelection3 = document.getElementById(scissor); **/
-    let computerSelection = cpuMove;
 
-   console.log(firstRound(playerSelection, computerSelection));
+
+    let playerSelection = document.getElementById(form);
+
+    let computerSelection = cpuMove;
+console.log(firstRound(playerSelection, computerSelection));
+
+
+    function round1Result () {
+        document.getElementById("input").addEventListener("click", writeResult);
+    }
+
+    function writeResult (){
+        document.getElementById("round-result").innerHTML = firstRound();
+    }
+
+//function roundResult (){
+  //  round1.innerHTML
+
+
+// console.log(firstRound(playerSelection, computerSelection));
    /**console.log(firstBranch(playerSelection2, computerSelection));
    console.log(firstBranch(playerSelection3, computerSelection));**/
 
 function loopRound(){
     for (let i = 0; i < 5; i++) {
-    console.log(firstRound(playerSelection, computerSelection));
+  //  console.log(firstRound(playerSelection, computerSelection));
     }
 }
 loopRound();
