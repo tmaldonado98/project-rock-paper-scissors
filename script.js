@@ -40,91 +40,104 @@ document.getElementById("scissor").addEventListener("click", popScissor);
 
 
 function popCpuText(){
-    if (cpuMove == "rock"){
+    if (cpuMove == "Rock"){
         document.getElementById("cpu-selection").innerHTML = "Rock"
     }
-    else if (cpuMove == "paper"){
+    else if (cpuMove == "Paper"){
         document.getElementById("cpu-selection").innerHTML = "Paper"
     }
-    else if (cpuMove == "scissor"){
+    else if (cpuMove == "Scissor"){
         document.getElementById("cpu-selection").innerHTML = "Scissor"
     }
 };
 document.getElementById("input").addEventListener("click", popCpuText);
 
 
-function storePopCpuTextResults (){
+
+function storePopCpuTextResults(){
     let computerSelection;
-    if (document.getElementById("cpu-selection").innerHTML == "Rock"){
+    if (cpuMove == "Rock"){
         computerSelection = "Rock"
     }
-
-
+    else if (cpuMove == "Paper"){
+        computerSelection = "Paper"
+    }
+    else if (cpuMove == "Scissor"){
+        computerSelection = "Scissor"
+    }
+    return computerSelection;
 }
 
 
 function storePopHumanText (){
     let playerSelection; 
-    if (document.getElementById("human-selection").innerHTML == "Rock"){
+    if (document.getElementById("human-selection").addEventListener("click", popRock)){
         playerSelection = "Rock"
     }
-     
+    else if (document.getElementById("human-selection").addEventListener("click", popPaper)){
+        playerSelection = "Paper"
+    }
+    else if (document.getElementById("human-selection").addEventListener("click", popScissor)){
+        playerSelection = "Scissor"
+    }
+    return playerSelection
 }
-
+//POTENTIAL PROBLEM IN THIS PREVIOUYS FUNCTION
 
 let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor beats paper!", "Stalemate!"];
 
+  //  let playerSelection = storePopHumanText();
+  //  let computerSelection = storePopCpuTextResults();
 
-    function firstRound (){
+    function firstRound (x){
         let result;
-        if (playerSelection == "Rock" && computerSelection == "paper") {
+        if (storePopHumanText == "Rock" && storePopCpuTextResults == "Paper") {
            result = "You lose! " + possibleOutcomes[1];
         }
-        else if (playerSelection == document.getElementById(paper) && computerSelection == "paper"){
+        else if (storePopHumanText == "Paper" && storePopCpuTextResults == "Paper"){
             result =  possibleOutcomes[3];
         }
-        else if (playerSelection == document.getElementById(scissor) && computerSelection == "paper" ){
+        else if (storePopHumanText == "Scissor" && storePopCpuTextResults == "Paper" ){
             result =  ("You win! " + possibleOutcomes[2]);
         }
-        else if (playerSelection == document.getElementById(rock) && computerSelection == "scissor") {
+        else if (storePopHumanText == "Rock" && storePopCpuTextResults == "Scissor") {
             result =  ("You win! " + possibleOutcomes[0]);
         }
-        else if (playerSelection == document.getElementById(paper) && computerSelection == "scissor"){
+        else if (storePopHumanText == "Paper" && storePopCpuTextResults == "Scissor"){
             result =  ("You lose! " + possibleOutcomes[2]);
         }
-        else if (playerSelection == document.getElementById(scissor) && computerSelection == "scissor" ){
+        else if (storePopHumanText == "Scissor" && storePopCpuTextResults == "Scissor" ){
             result =  possibleOutcomes[3];
             return result
         }
-        else if (playerSelection == document.getElementById(rock) && computerSelection == "rock") {
+        else if (storePopHumanText == "Rock" && storePopCpuTextResults == "Rock") {
             result =  possibleOutcomes[3];
         }
-        else if (playerSelection == document.getElementById(paper) && computerSelection == "rock"){
+        else if (storePopHumanText == "Paper" && storePopCpuTextResults == "Rock"){
             result =  ("You win! " + possibleOutcomes[1]);
         }
-        else if (playerSelection == document.getElementById(scissor) && computerSelection == "rock" ){
+        else if (storePopHumanText == "Scissor" && storePopCpuTextResults == "Rock" ){
             result =  ("You lose! " + possibleOutcomes[0]);
         }   
-        return result
+        return displayResultsAfterInputs(result);
+         
     }
-    let playerSelection = document.getElementById(form);
-    let computerSelection = cpuMove;
-    
-    
-    function displayResultsAfterInputs(){
-        if ()
-    }    
-    document.getElementById("round-result").innerHTML = firstRound(playerSelection, computerSelection);
+  
+
+   // document.addEventListener("input", displayResultsAfterInputs);
 
 
   /**   function round1Result () {
-        document.getElementById("input").addEventListener("click", writeResult);
-    }
+        document.getElementById("rock", "paper", "scissor").addEventListener("click", trigger);
+    } */
 
-    function writeResult (){
-        document.getElementById("round-result").innerHTML = firstRound();
-    } 
-       **/
+    /**function trigger (){
+        document.getElementById("input").addEventListener("click", popCpuText);
+    } */
+
+//round1Result();    
+       // document.getElementById("round-result").innerHTML = firstRound(playerSelection, computerSelection)
+
 
 //function roundResult (){
   //  round1.innerHTML
