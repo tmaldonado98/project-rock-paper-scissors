@@ -2,40 +2,44 @@ let moves = ["Rock", "Paper", "Scissor"];
 
 let cpuMove = moves[Math.floor(Math.random()*moves.length)];
 
+function showCpuMove(){
+document.getElementById("cpu-selection").innerHTML = cpuMove;
+}
+
 function computerMove(){
     return moves[Math.floor(Math.random()*moves.length)]
 }
 
-console.log(cpuMove);
+//console.log(cpuMove);
 //alert(computerMove());
 
-
+let cpuMoveRock = "Rock"
 
 
 let options = ["Rock", "Paper", "Scissor"];
 
 function popNoSelection(){
-    document.getElementById("human-selection").innerHTML = "No option selected."
+    document.getElementById("humanSelection").innerHTML = "No option selected."
 };
-document.getElementById("none").addEventListener("click", popNoSelection);
+//document.getElementById("none").addEventListener("click", popNoSelection);
 
 
 function popRock(){
-    document.getElementById("human-selection").innerHTML = "Rock"
+    document.getElementById("humanSelection").innerHTML = "Rock"
 };
-document.getElementById("rock").addEventListener("click", popRock);
+//document.getElementById("rock").addEventListener("click", popRock);
 
 
 function popPaper(){
-    document.getElementById("human-selection").innerHTML = "Paper"
+    document.getElementById("humanSelection").innerHTML = "Paper"
 };
-document.getElementById("paper").addEventListener("click", popPaper);
+//document.getElementById("paper").addEventListener("click", popPaper);
 
 
 function popScissor(){
-    document.getElementById("human-selection").innerHTML = "Scissor"
+    document.getElementById("humanSelection").innerHTML = "Scissor"
 };
-document.getElementById("scissor").addEventListener("click", popScissor);
+//document.getElementById("scissor").addEventListener("click", popScissor);
 
 
 
@@ -80,7 +84,7 @@ function showResult(){
 
 
 
-function storePopHumanText (){
+/*function storePopHumanText (){
     let playerSelection; 
     if (document.getElementById("human-selection").addEventListener("click", popRock)){
         playerSelection = "Rock"
@@ -94,9 +98,9 @@ function storePopHumanText (){
 }
 let pSR = document.getElementById("human-selection").innerHTML = "Rock";
 let pSP = document.getElementById("human-selection").innerHTML = "Paper";
-let pSS = document.getElementById("human-selection").innerHTML = "Scissor";
+let pSS = document.getElementById("human-selection").innerHTML = "Scissor";*/
 
-storePopHumanText()
+//storePopHumanText()
 //POTENTIAL PROBLEM IN THIS PREVIOUYS FUNCTION
 
 
@@ -110,7 +114,7 @@ let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor be
 
     //let combinationOfPossibleOutcomes = [(),(),(),(),(),(),(),(),()]
         
-   /* let p1 =   "You lose! " + possibleOutcomes[1];
+    let p1 =   "You lose! " + possibleOutcomes[1];
     let p2 =  possibleOutcomes[3];
     let p3 = "You win! " + possibleOutcomes[2];
     let p4 = "You win! " + possibleOutcomes[0];
@@ -118,49 +122,57 @@ let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor be
     let p6 = possibleOutcomes[3];
     let p7 = possibleOutcomes[3];
     let p8 = "You win! " + possibleOutcomes[1];
-    let p9 = "You lose! " + possibleOutcomes[0]; */
+    let p9 = "You lose! " + possibleOutcomes[0]; 
 
+/*document.getElementById("rock").click(popRock());
+document.getElementById("paper").click(popPaper());
+document.getElementById("scissor").click(popScissor());
+document.getElementById("none").click(popNoSelection());*/
 
-      
         
 function one(){
-    document.getElementById("round-result").innerHTML = "You lose! " + possibleOutcomes[1];
+   return document.getElementById("round-result").innerHTML = "You lose! " + possibleOutcomes[1];
 }     
 
 function two(){
-    document.getElementById("round-result").innerHTML = possibleOutcomes[3];
+    return   document.getElementById("round-result").innerHTML = possibleOutcomes[3];
 } 
 
 function three(){
-    document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[2];
+    return   document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[2];
 } 
 
 function four(){
-    document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[0];
+    return  document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[0];
 } 
 
 function five(){
-    document.getElementById("round-result").innerHTML = "You lose! " + possibleOutcomes[2];
+    return   document.getElementById("round-result").innerHTML = "You lose! " + possibleOutcomes[2];
 } 
 
 function six(){
-    document.getElementById("round-result").innerHTML = possibleOutcomes[3];
+    return  document.getElementById("round-result").innerHTML = possibleOutcomes[3];
 } 
 
 function seven(){
-    document.getElementById("round-result").innerHTML = possibleOutcomes[3];
+    return  document.getElementById("round-result").innerHTML = possibleOutcomes[3];
 } 
 
 function eight(){
-    document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[1];
+    return   document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[1];
 } 
 
 function nine(){
-    document.getElementById("round-result").innerHTML = "You lose! " + possibleOutcomes[0];
+    return   document.getElementById("round-result").innerHTML = "You lose! " + possibleOutcomes[0];
 } 
 
-function conditional(pSR, pSP, pSR, cpuMove){
-    let p1 = pSR == "Rock" && cpuMove == "Paper";
+let rockClicked = document.getElementById("humanSelection");
+let paperClicked = document.getElementById("humanSelection");
+let scissorClicked = document.getElementById("humanSelection");
+
+
+function conditional(){
+    /*let p1 = pSR == "Rock" && cpuMove == "Paper";
     let p2 = pSP  == "Paper" && cpuMove == "Paper";
     let p3 = pSS  == "Scissor" && cpuMove == "Paper";
     let p4 = pSR  == "Rock" && cpuMove == "Scissor";
@@ -168,46 +180,83 @@ function conditional(pSR, pSP, pSR, cpuMove){
     let p6 = pSS  == "Scissor" && cpuMove == "Scissor"
     let p7 = pSR  == "Rock" && cpuMove == "Rock";
     let p8 = pSP  == "Paper" && cpuMove == "Rock";
-    let p9 = pSS  == "Scissor" && cpuMove == "Rock";
+    let p9 = pSS  == "Scissor" && cpuMove == "Rock";*/
+    //document.getElementById("cpu-selection").innerHTML
+        if (document.getElementById("humanSelection").innerHTML == "Rock" && document.getElementById("cpu-selection").innerHTML == "Paper"){
+            return one();
+        }
+        else if (document.getElementById("humanSelection").innerHTML== "Paper" && document.getElementById("cpu-selection").innerHTML  == "Paper"){
+            return two();
+        }
+        else if (document.getElementById("humanSelection").innerHTML == "Scissor" && document.getElementById("cpu-selection").innerHTML  == "Paper"){
+            return three();
+        }
+        else if (document.getElementById("humanSelection").innerHTML == "Rock" && document.getElementById("cpu-selection").innerHTML  == "Scissor") {
+            return   four();
+        }
+        else if (document.getElementById("humanSelection").innerHTML == "Paper" && document.getElementById("cpu-selection").innerHTML  == "Scissor"){
+            return    five();
+        }
+        else if (document.getElementById("humanSelection").innerHTML == "Scissor" && document.getElementById("cpu-selection").innerHTML  == "Scissor"){
+            return    six();
+        }
+        else if (document.getElementById("humanSelection").innerHTML == "Rock" && document.getElementById("cpu-selection").innerHTML  == "Rock") {
+            return  seven();
+        }
+        else if (document.getElementById("humanSelection").innerHTML == "Paper" && document.getElementById("cpu-selection").innerHTML  == "Rock"){
+            return   eight();
+        }
+        else if (document.getElementById("humanSelection").innerHTML == "Scissor" && document.getElementById("cpu-selection").innerHTML  == "Rock"){
+            return   nine();
+        }
+        else {
+            return "persist, don't give up."
+        }
+    }
 
-        if (p1 == true){
-             one()
+
+
+    /* backup
+            if (document.getElementById("rock").clicked == true && cpuMove == "Paper"){
+            return one()
         }
-        else if (p2 == true){
-            two()
+        else if (document.getElementById("paper").clicked == true && cpuMove == "Paper"){
+            return two()
         }
-        else if (p3 == true ){
-            three()
+        else if (document.getElementById("scissor").clicked == true && cpuMove == "Paper"){
+            return three()
         }
-        else if (p4 == true) {
-            four()
+        else if (document.getElementById("rock").clicked == true && cpuMove == "Scissor") {
+            return   four()
         }
-        else if (p5 == true){
-            five()
+        else if (document.getElementById("paper").clicked == true && cpuMove == "Scissor"){
+            return    five()
         }
-        else if (p6 == true){
-            six()
+        else if (document.getElementById("scissor").clicked == true && cpuMove == "Scissor"){
+            return    six()
         }
-        else if (p7 == true) {
-            seven()
+        else if (document.getElementById("rock").clicked == true && cpuMove == "Rock") {
+            return  seven()
         }
-        else if (p8 == true){
-            eight()
+        else if (document.getElementById("paper").clicked == true && cpuMove == "Rock"){
+            return   eight()
         }
-        else if (p9 == true){
-            nine()
+        else if (document.getElementById("scissor").clicked == true && cpuMove == "Rock"){
+            return   nine()
         }
+    } */
+
        /* else{
             result = "persist, don't give up."
         }*/
         //alert(result); 
-}
+
     
    // conditional();
 
-    document.getElementById("form").addEventListener("click", computerMove);
+   // document.getElementById("form").addEventListener("click", computerMove);
 
-    document.getElementById("button").addEventListener("click", conditional);
+    //document.getElementById("button").addEventListener("click", conditional);
         
     /*function initRound(){
     document.getElementById("round-result").innerHTML = conditional();
@@ -278,9 +327,8 @@ function conditional(pSR, pSP, pSR, cpuMove){
    /**console.log(firstBranch(playerSelection2, computerSelection));
    console.log(firstBranch(playerSelection3, computerSelection));**/
 
-function loopRound(){
-    for (let i = 0; i < 5; i++) {
+/*function loopRound(){
+    for (let i = 0; i < 5; i++) {  */
   //  console.log(firstRound(playerSelection, computerSelection));
-    }
-}
+  
 //loopRound();
