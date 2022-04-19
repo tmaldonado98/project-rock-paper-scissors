@@ -1,11 +1,12 @@
 document.getElementById("cpuButtonDiv").setAttribute("style","visibility:hidden");
 document.getElementById("button").setAttribute("style","visibility:hidden");
 document.getElementById("pDiv").setAttribute("style","visibility:hidden");
-document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
 document.getElementById("nextRound").setAttribute("style", "visibility:hidden");
 document.getElementById("scoreA").setAttribute("style", "visibility:hidden");
 document.getElementById("scoreB").setAttribute("style", "visibility:hidden");
 document.getElementById("scoreC").setAttribute("style", "visibility:hidden");
+
+//document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
 
 function showCpuButtonDiv(){
     document.getElementById("cpuButtonDiv").setAttribute("style","visibility:visible");
@@ -19,9 +20,9 @@ function showPDiv(){
     document.getElementById("pDiv").setAttribute("style", "visibility:visible");
 }
 
-function showPlayAgain(){
+/*function showPlayAgain(){
     document.getElementById("playAgain").setAttribute("style", "visibility:visible");
-}
+}*/
 
 function showNextRound (){
     document.getElementById("nextRound").setAttribute("style", "visibility:visible");
@@ -141,25 +142,36 @@ function conditional(){
 //
 
 //
+  //let seshA = sessionStorage.setItem('score', id)
+function seshA (){
+    sessionStorage.setItem('score', document.getElementById("scoreA"))
+}
+function seshB(){
+    sessionStorage.setItem('score', document.getElementById("scoreB"))
+}
+function seshC(){
+    sessionStorage.setItem('score', document.getElementById("scoreC"))
+}
+
     function showScore1(){
         if(document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
-        return document.getElementById("scoreA").setAttribute("style", "visibility:visible"); 
+        return document.getElementById("scoreA").setAttribute("style", "visibility:visible")
+            
         }
         else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
-            return document.getElementById("scoreB").setAttribute("style", "visibility:visible");    
-        } 
+        return document.getElementById("scoreB").setAttribute("style", "visibility:visible")
+                 
+        }  
         else if(document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
-        return document.getElementById("scoreC").setAttribute("style", "visibility:visible");
+        return document.getElementById("scoreC").setAttribute("style", "visibility:visible")
     }
 }
+
 
 //end round
 
 
 //
-function nextRound(){
-    
-}

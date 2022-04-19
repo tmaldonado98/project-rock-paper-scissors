@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
 
-        <script src="script.js" defer></script>
+        <script src="script2.js" defer></script>
     </head>
 
-<body>
+<body onload="sessionStorage.getItem('score')">
     
    
     <form>
-        <h2>Best of 3 rounds wins! &nbsp;&nbsp;&nbsp; :) <br><br> Round 1</h2>
+        <h2>Round 2</h2>
         <select onclick="cpuMove, console.log(cpuMove)" id="form">
             <option onclick="popNoSelection()" id="none">Select an option.</option>
             <option onclick="popRock(), showCpuButtonDiv()" id="rock">Rock</option>
@@ -35,29 +35,33 @@
     <br>
     <br>
 
-    <!--showPlayAgain()-->
-    <input onclick="conditional(), showCpuMove(), showPDiv(), showScore1(), showNextRound()" , 
+    
+    <input onclick="conditional(), showCpuMove(), showPlayAgain(), showPDiv(), showScore2(), showNextRound()" , 
     id="button" type="button" value="Click to view results."></input>
     <h4 id="resultText"></h4>
     </form>
 
     <h2 id="round-result"></h2>
 <br><br><br>
-<!--<input id="playAgain" type="button", value="Start Over" onclick="history.go(0)"></button>-->
+<button id="playAgain"><a href="index.html">Start Over</a></button>
 
 <br><br>
 
-<button id="nextRound"><a href="./round2.html">Play Next Round</a></button>
+<button id="nextRound"><a href="./round3.html">Play Next Round</a></button>
 
 <h4 id="scoreA">Player: 1<br>CPU: 0</h4>
 <h4 id="scoreB">Player: 0<br>CPU: 1</h4>
 <h4 id="scoreC">Player: 0<br>CPU: 0</h4>
 
-<!--<h4 id="scoreD">Player: 2<br>CPU: 0</h4>
+<h4 id="scoreD">Player: 2<br>CPU: 0</h4>
 <h4 id="scoreE">Player: 0<br>CPU: 2</h4>
 <h4 id="scoreF">Player: 0<br>CPU: 0</h4>
-<h4 id="scoreG">Player: 1<br>CPU: 1</h4>-->
+<h4 id="scoreG">Player: 1<br>CPU: 1</h4>
+<h4 id="scoreH">Player: 1<br>CPU: 0</h4>
+<h4 id="scoreI">Player: 0<br>CPU: 1</h4>
 
+<h1 id="endSeriesPl">You have won the series!</h1>
+<h1 id="endSeriesCpu">You have lost the series against the CPU!</h1>
 
 <script>
     
