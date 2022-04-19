@@ -10,7 +10,7 @@
     
    
     <form>
-        <h2>Round 1</h2>
+        <h2>Best of 3 rounds wins! &nbsp;&nbsp;&nbsp; :) <br><br> Round 1</h2>
         <select onclick="cpuMove, console.log(cpuMove)" id="form">
             <option onclick="popNoSelection()" id="none">Select an option.</option>
             <option onclick="popRock(), showCpuButtonDiv()" id="rock">Rock</option>
@@ -24,7 +24,10 @@
     
    <div id="cpuButtonDiv">
         <input onclick="showButton()" id="input", type="button", value="Click for CPU's move."></input>
-        <p>CPU's selection: </p><h4 id="cpu-selection"></h4> 
+            <div id="pDiv">
+                <p>CPU's selection: </p>
+            </div>
+        <h4 id="cpu-selection"></h4> 
     </div>
      
     
@@ -33,7 +36,8 @@
     <br>
 
     
-    <input onclick="conditional(), showCpuMove(), showPlayAgain()" , id="button" type="button" value="Click to view results."></input>
+    <input onclick="conditional(), showCpuMove(), showPlayAgain(), showPDiv(), showScore1(), showNextRound()" , 
+    id="button" type="button" value="Click to view results."></input>
     <h4 id="resultText"></h4>
     </form>
 
@@ -41,8 +45,16 @@
 <br><br><br><br>
 <input id="playAgain" type="button", value="Play Again" onclick="history.go(0)"></button>
 
+<br><br>
 
-    <script>
+<input id="nextRound" type="button", value="Play Next Round" onclick=""></button>
+
+<h4 id="scoreA">Player: 1<br>CPU: 0</h4>
+<h4 id="scoreB">Player: 0<br>CPU: 1</h4>
+<h4 id="scoreC">Player: 0<br>CPU: 0</h4>
+
+
+<script>
     
 
     </script>
