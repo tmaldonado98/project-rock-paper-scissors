@@ -1,3 +1,19 @@
+document.getElementById("cpuButtonDiv").setAttribute("style","visibility:hidden");
+document.getElementById("button").setAttribute("style","visibility:hidden");
+document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
+
+function showCpuButtonDiv(){
+    document.getElementById("cpuButtonDiv").setAttribute("style","visibility:visible");
+}
+
+function showButton(){
+    document.getElementById("button").setAttribute("style","visibility:visible");
+}
+
+function showPlayAgain(){
+    document.getElementById("playAgain").setAttribute("style", "visibility:visible");
+}
+
 let moves = ["Rock", "Paper", "Scissor"]; 
 
 let cpuMove = moves[Math.floor(Math.random()*moves.length)];
@@ -41,6 +57,8 @@ function popScissor(){
 };
 //document.getElementById("scissor").addEventListener("click", popScissor);
 
+//function cpuButtonAppear(){
+  //  return document.getElementById("cpuButtonDiv").innerHTML = 
 
 
 /*function popCpuText(){
@@ -182,31 +200,31 @@ function conditional(){
     let p8 = pSP  == "Paper" && cpuMove == "Rock";
     let p9 = pSS  == "Scissor" && cpuMove == "Rock";*/
     //document.getElementById("cpu-selection").innerHTML
-        if (document.getElementById("humanSelection").innerHTML == "Rock" && document.getElementById("cpu-selection").innerHTML == "Paper"){
+        if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper"){
             return one();
         }
-        else if (document.getElementById("humanSelection").innerHTML== "Paper" && document.getElementById("cpu-selection").innerHTML  == "Paper"){
+        else if (document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper"){
             return two();
         }
-        else if (document.getElementById("humanSelection").innerHTML == "Scissor" && document.getElementById("cpu-selection").innerHTML  == "Paper"){
+        else if (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper"){
             return three();
         }
-        else if (document.getElementById("humanSelection").innerHTML == "Rock" && document.getElementById("cpu-selection").innerHTML  == "Scissor") {
+        else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor") {
             return   four();
         }
-        else if (document.getElementById("humanSelection").innerHTML == "Paper" && document.getElementById("cpu-selection").innerHTML  == "Scissor"){
+        else if (document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor"){
             return    five();
         }
-        else if (document.getElementById("humanSelection").innerHTML == "Scissor" && document.getElementById("cpu-selection").innerHTML  == "Scissor"){
+        else if (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor"){
             return    six();
         }
-        else if (document.getElementById("humanSelection").innerHTML == "Rock" && document.getElementById("cpu-selection").innerHTML  == "Rock") {
+        else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock") {
             return  seven();
         }
-        else if (document.getElementById("humanSelection").innerHTML == "Paper" && document.getElementById("cpu-selection").innerHTML  == "Rock"){
+        else if (document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
             return   eight();
         }
-        else if (document.getElementById("humanSelection").innerHTML == "Scissor" && document.getElementById("cpu-selection").innerHTML  == "Rock"){
+        else if (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
             return   nine();
         }
         else {
