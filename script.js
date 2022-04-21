@@ -2,9 +2,9 @@ document.getElementById("cpuButtonDiv").setAttribute("style","visibility:hidden"
 document.getElementById("button").setAttribute("style","visibility:hidden");
 document.getElementById("pDiv").setAttribute("style","visibility:hidden");
 document.getElementById("nextRound").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreA").setAttribute("style", "visibility:hidden");
+/*document.getElementById("scoreA").setAttribute("style", "visibility:hidden");
 document.getElementById("scoreB").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreC").setAttribute("style", "visibility:hidden");
+document.getElementById("scoreC").setAttribute("style", "visibility:hidden");*/
 
 //document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
 
@@ -143,34 +143,49 @@ function conditional(){
 
 //
   //let seshA = sessionStorage.setItem('score', id)
-function seshA (){
-    sessionStorage.setItem('score', document.getElementById("scoreA"))
+let playerScore = 0;
+let CPUScore = 0;
+
+function increaseCountA(x, y){
+   return x++, y++
 }
-function seshB(){
-    sessionStorage.setItem('score', document.getElementById("scoreB"))
-}
-function seshC(){
-    sessionStorage.setItem('score', document.getElementById("scoreC"))
-}
+function increaseCountB(y){
+    return y++
+ }
+ /*function increaseCountC(x, y){
+    return x || y
+ }*/
+
+let x = "";
+let seshA = ("Player: ") + (increaseCountA(playerScore)) + (" CPU: ") + (increaseCountA(x, CPUScore));
+
+let seshB = ("Player: ") + (playerScore) + (" CPU: ") + (increaseCountB(CPUScore));
+
+let seshC = ("Player: ") + (playerScore) + (" CPU: ") + (CPUScore);
+
 
     function showScore1(){
         if(document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
-        return document.getElementById("scoreA").setAttribute("style", "visibility:visible")
-            
+        //return document.getElementById("scoreA").setAttribute("style", "visibility:visible"),
+        sessionStorage.setItem('score', JSON.stringify(seshA))
         }
         else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
-        return document.getElementById("scoreB").setAttribute("style", "visibility:visible")
-                 
+        //return document.getElementById("scoreB").setAttribute("style", "visibility:visible"),
+        sessionStorage.setItem('score', JSON.stringify(seshB))
         }  
         else if(document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
-        return document.getElementById("scoreC").setAttribute("style", "visibility:visible")
+        //return document.getElementById("scoreC").setAttribute("style", "visibility:visible"),
+        sessionStorage.setItem('score', JSON.stringify(seshC))
     }
+    document.getElementById("cumulScore").innerHTML = sessionStorage.getItem('score')
+
 }
 
-
+//document.getElementById("cumulScore").innerHTML = sessionStorage.getItem('score');
+//window.sessionStorage.getItem('score');
 //end round
 
 
