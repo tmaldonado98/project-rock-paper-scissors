@@ -142,50 +142,44 @@ function conditional(){
 //
 
 //
-  //let seshA = sessionStorage.setItem('score', id)
 let playerScore = 0;
 let CPUScore = 0;
+let number = 0;
 
-function increaseCountA(x, y){
-   return x++, y++
+/*function increaseCountA(x){
+   return x= x++
 }
 function increaseCountB(y){
     return y++
- }
- /*function increaseCountC(x, y){
-    return x || y
  }*/
 
-let x = "";
-let seshA = ("Player: ") + (increaseCountA(playerScore)) + (" CPU: ") + (increaseCountA(x, CPUScore));
+function sesh(){
+    return 1
+}
 
-let seshB = ("Player: ") + (playerScore) + (" CPU: ") + (increaseCountB(CPUScore));
+let seshA = ("Player: ") + (sesh()) + (" CPU: ") + (number);
 
-let seshC = ("Player: ") + (playerScore) + (" CPU: ") + (CPUScore);
+let seshB = ("Player: ") + (number) + (" CPU: ") + (sesh());
 
+let seshC = ("Player: ") + (number) + (" CPU: ") + (number);
 
     function showScore1(){
         if(document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
-        //return document.getElementById("scoreA").setAttribute("style", "visibility:visible"),
         sessionStorage.setItem('score', JSON.stringify(seshA))
         }
         else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
-        //return document.getElementById("scoreB").setAttribute("style", "visibility:visible"),
         sessionStorage.setItem('score', JSON.stringify(seshB))
         }  
         else if(document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
-        //return document.getElementById("scoreC").setAttribute("style", "visibility:visible"),
         sessionStorage.setItem('score', JSON.stringify(seshC))
     }
     document.getElementById("cumulScore").innerHTML = sessionStorage.getItem('score')
 
 }
 
-//document.getElementById("cumulScore").innerHTML = sessionStorage.getItem('score');
-//window.sessionStorage.getItem('score');
 //end round
 
 

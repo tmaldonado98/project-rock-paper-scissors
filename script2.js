@@ -1,22 +1,10 @@
-/*function showSeshScore(){
-    if(sessionStorage.getItem('score') == document.getElementById("scoreA")){
-        return document.getElementById("scoreA").setAttribute("style", "visibility:visible");
-    }
-    else if(sessionStorage.getItem('score') == document.getElementById("scoreB")){
-        return document.getElementById("scoreB").setAttribute("style", "visibility:visible");
-    }
-    else if(sessionStorage.getItem('score') == document.getElementById("scoreC")){
-        return document.getElementById("scoreC").setAttribute("style", "visibility:visible");
-    }
-}*/
-
 document.getElementById("cpuButtonDiv").setAttribute("style","visibility:hidden");
 document.getElementById("button").setAttribute("style","visibility:hidden");
 document.getElementById("pDiv").setAttribute("style","visibility:hidden");
 document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
 document.getElementById("nextRound").setAttribute("style", "visibility:hidden");
 
-document.getElementById("scoreA").setAttribute("style", "visibility:hidden");
+/*document.getElementById("scoreA").setAttribute("style", "visibility:hidden");
 document.getElementById("scoreB").setAttribute("style", "visibility:hidden");
 document.getElementById("scoreC").setAttribute("style", "visibility:hidden");
 
@@ -25,7 +13,7 @@ document.getElementById("scoreE").setAttribute("style", "visibility:hidden");
 document.getElementById("scoreF").setAttribute("style", "visibility:hidden");
 document.getElementById("scoreG").setAttribute("style", "visibility:hidden");
 document.getElementById("scoreH").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreI").setAttribute("style", "visibility:hidden");
+document.getElementById("scoreI").setAttribute("style", "visibility:hidden");*/
 document.getElementById("endSeriesPl").setAttribute("style", "visibility:hidden");
 document.getElementById("endSeriesCpu").setAttribute("style", "visibility:hidden");
 
