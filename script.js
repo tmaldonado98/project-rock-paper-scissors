@@ -142,9 +142,9 @@ function conditional(){
 //
 
 //
-let playerScore = 0;
+/*let playerScore = 0;
 let CPUScore = 0;
-let number = 0;
+let number = 0;*/
 
 /*function increaseCountA(x){
    return x= x++
@@ -153,32 +153,77 @@ function increaseCountB(y){
     return y++
  }*/
 
-function sesh(){
+/*function sesh(){
     return 1
-}
+}*/
 
-let seshA = ("Player: ") + (sesh()) + (" CPU: ") + (number);
+/*let seshAHum = ("Player: ") + (sesh());
 
-let seshB = ("Player: ") + (number) + (" CPU: ") + (sesh());
+let seshBHum = ("Player: ") + (number);
 
-let seshC = ("Player: ") + (number) + (" CPU: ") + (number);
+let seshCHum = ("Player: ") + (number);*/ 
+
+   /* BACKUP 
+    function showScore1(){
+        if(document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
+        document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
+        sessionStorage.setItem('score', JSON.stringify(seshAHum))
+        }
+        else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
+        document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
+        sessionStorage.setItem('score', JSON.stringify(seshBHum))
+        }  
+        else if(document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
+        document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
+        sessionStorage.setItem('score', JSON.stringify(seshCHum))
+    }
+    document.getElementById("cumulScore").innerHTML = sessionStorage.getItem('score')
+
+}*/
+
 
     function showScore1(){
         if(document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
-        sessionStorage.setItem('score', JSON.stringify(seshA))
+        sessionStorage.setItem('scoreAHum', 1),
+        sessionStorage.setItem('scoreACpu', 0)
         }
         else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
-        sessionStorage.setItem('score', JSON.stringify(seshB))
+        sessionStorage.setItem('scoreAHum', 0),
+        sessionStorage.setItem('scoreACpu', 1)
         }  
         else if(document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
         document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
-        sessionStorage.setItem('score', JSON.stringify(seshC))
+            sessionStorage.setItem('scoreAHum', 0),
+            sessionStorage.setItem('scoreACpu', 0)
     }
-    document.getElementById("cumulScore").innerHTML = sessionStorage.getItem('score')
 
+    let scoreTextHum = ("Player: ") + sessionStorage.getItem('scoreAHum'); 
+    let scoreTextCpu = ("CPU: ") + sessionStorage.getItem('scoreACpu');
+
+    document.getElementById("cumulScoreHum").innerHTML = scoreTextHum;
+    document.getElementById("cumulScoreCPU").innerHTML = scoreTextCpu;
 }
+
+let score1 = [sessionStorage.setItem('scoreAHum', 1), sessionStorage.setItem('scoreACpu', 0)];
+
+let score2 = [sessionStorage.setItem('scoreAHum', 0), sessionStorage.setItem('scoreACpu', 1)];
+
+let score3 = [sessionStorage.setItem('scoreAHum', 0), sessionStorage.setItem('scoreACpu', 0)];
+
+//if(document.getElementById("cumulScoreHum") == );
+//sessionStorage.setItem('R1', JSON.stringify(score1))
+
+/*8let seshACpu = (" CPU: ") + (number);
+
+let seshBCpu = (" CPU: ") + (sesh());
+
+let seshCCpu = (" CPU: ") + (number);
+
+if(sessionStorage.setItem('score', JSON.stringify(seshA))){
+    sessionStorage.setItem('cpuScore', 0)
+}*/
 
 //end round
 
