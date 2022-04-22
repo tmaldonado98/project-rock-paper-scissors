@@ -10,16 +10,6 @@ let round1ScoreCPU = "CPU: " + sessionStorage.getItem('scoreACpu');
 document.getElementById("cumulScoreHum").innerHTML = round1ScoreHum;
 document.getElementById("cumulScoreCPU").innerHTML = round1ScoreCPU;
 
-/*document.getElementById("scoreA").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreB").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreC").setAttribute("style", "visibility:hidden");
-
-document.getElementById("scoreD").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreE").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreF").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreG").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreH").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreI").setAttribute("style", "visibility:hidden");*/
 document.getElementById("endSeriesPl").setAttribute("style", "visibility:hidden");
 document.getElementById("endSeriesCpu").setAttribute("style", "visibility:hidden");
 
@@ -88,7 +78,7 @@ let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor be
 
         
 function one(){
-   return document.getElementById("round-result").innerHTML = "CPU wins! " + possibleOutcomes[1];
+   return document.getElementById("round-result").innerHTML = "CPU wins the round! " + possibleOutcomes[1];
 }     
 
 function two(){
@@ -96,15 +86,15 @@ function two(){
 } 
 
 function three(){
-    return   document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[2];
+    return   document.getElementById("round-result").innerHTML = "You win the round! " + possibleOutcomes[2];
 } 
 
 function four(){
-    return  document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[0];
+    return  document.getElementById("round-result").innerHTML = "You win the round! " + possibleOutcomes[0];
 } 
 
 function five(){
-    return   document.getElementById("round-result").innerHTML = "CPU wins! " + possibleOutcomes[2];
+    return   document.getElementById("round-result").innerHTML = "CPU wins the round! " + possibleOutcomes[2];
 } 
 
 function six(){
@@ -116,11 +106,11 @@ function seven(){
 } 
 
 function eight(){
-    return   document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[1];
+    return   document.getElementById("round-result").innerHTML = "You win the round! " + possibleOutcomes[1];
 } 
 
 function nine(){
-    return   document.getElementById("round-result").innerHTML = "CPU wins! " + possibleOutcomes[0];
+    return   document.getElementById("round-result").innerHTML = "CPU wins the round! " + possibleOutcomes[0];
 } 
 //
 
@@ -158,42 +148,14 @@ function conditional(){
 //
 
 //
-    /*function showScore1(){
-        if(document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
-        document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
-        return document.getElementById("scoreA").setAttribute("style", "visibility:visible"); 
-        }
-        else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
-        document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
-            return document.getElementById("scoreB").setAttribute("style", "visibility:visible");    
-        } 
-        else if(document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
-        document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
-        return document.getElementById("scoreC").setAttribute("style", "visibility:visible");
-    }
-}*/
-
-let number = 0;
-
-function sesh(){
-    return 1
-}
-
-function getPrevScore(){
-    return sessionStorage.getItem('scoreAHum'),
-    sessionStorage.getItem('scoreACpu')
-}
-
-console.log(getPrevScore());
-
-//let r1r2ScoreA = 
 
     function showScore2(){
         //if player scored 1 in first round and scores 1 again in round two
         if(sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
         sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
         sessionStorage.setItem('scoreBHum', 2),
-        sessionStorage.setItem('scoreBCpu', 0)
+        sessionStorage.setItem('scoreBCpu', 0),
+        document.getElementById("endSeriesPl").setAttribute("style", "visibility:visible");
         }
         // if player scored 1 in first round and stalemate in round two
         else if (sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
@@ -223,7 +185,8 @@ console.log(getPrevScore());
         else if (sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
         sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
         sessionStorage.setItem('scoreBHum', 0),
-        sessionStorage.setItem('scoreBCpu', 2)
+        sessionStorage.setItem('scoreBCpu', 2),
+        document.getElementById("endSeriesCpu").setAttribute("style", "visibility:visible");
         } 
         // if player stalemate in first round and scores 1 in round two
         else if (sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||

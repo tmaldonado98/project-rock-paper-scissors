@@ -2,10 +2,6 @@ document.getElementById("cpuButtonDiv").setAttribute("style","visibility:hidden"
 document.getElementById("button").setAttribute("style","visibility:hidden");
 document.getElementById("pDiv").setAttribute("style","visibility:hidden");
 document.getElementById("nextRound").setAttribute("style", "visibility:hidden");
-/*document.getElementById("scoreA").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreB").setAttribute("style", "visibility:hidden");
-document.getElementById("scoreC").setAttribute("style", "visibility:hidden");*/
-
 //document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
 
 function showCpuButtonDiv(){
@@ -72,7 +68,7 @@ let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor be
 
         
 function one(){
-   return document.getElementById("round-result").innerHTML = "CPU wins! " + possibleOutcomes[1];
+   return document.getElementById("round-result").innerHTML = "CPU wins the round! " + possibleOutcomes[1];
 }     
 
 function two(){
@@ -80,15 +76,15 @@ function two(){
 } 
 
 function three(){
-    return   document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[2];
+    return   document.getElementById("round-result").innerHTML = "You win the round! " + possibleOutcomes[2];
 } 
 
 function four(){
-    return  document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[0];
+    return  document.getElementById("round-result").innerHTML = "You win round! " + possibleOutcomes[0];
 } 
 
 function five(){
-    return   document.getElementById("round-result").innerHTML = "CPU wins! " + possibleOutcomes[2];
+    return   document.getElementById("round-result").innerHTML = "CPU wins the round! " + possibleOutcomes[2];
 } 
 
 function six(){
@@ -100,11 +96,11 @@ function seven(){
 } 
 
 function eight(){
-    return   document.getElementById("round-result").innerHTML = "You win! " + possibleOutcomes[1];
+    return   document.getElementById("round-result").innerHTML = "You win the round! " + possibleOutcomes[1];
 } 
 
 function nine(){
-    return   document.getElementById("round-result").innerHTML = "CPU wins! " + possibleOutcomes[0];
+    return   document.getElementById("round-result").innerHTML = "CPU wins the round! " + possibleOutcomes[0];
 } 
 //
 
@@ -142,45 +138,6 @@ function conditional(){
 //
 
 //
-/*let playerScore = 0;
-let CPUScore = 0;
-let number = 0;*/
-
-/*function increaseCountA(x){
-   return x= x++
-}
-function increaseCountB(y){
-    return y++
- }*/
-
-/*function sesh(){
-    return 1
-}*/
-
-/*let seshAHum = ("Player: ") + (sesh());
-
-let seshBHum = ("Player: ") + (number);
-
-let seshCHum = ("Player: ") + (number);*/ 
-
-   /* BACKUP 
-    function showScore1(){
-        if(document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
-        document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
-        sessionStorage.setItem('score', JSON.stringify(seshAHum))
-        }
-        else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
-        document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
-        sessionStorage.setItem('score', JSON.stringify(seshBHum))
-        }  
-        else if(document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
-        document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
-        sessionStorage.setItem('score', JSON.stringify(seshCHum))
-    }
-    document.getElementById("cumulScore").innerHTML = sessionStorage.getItem('score')
-
-}*/
-
 
     function showScore1(){
         if(document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
@@ -205,25 +162,6 @@ let seshCHum = ("Player: ") + (number);*/
     document.getElementById("cumulScoreHum").innerHTML = scoreTextHum;
     document.getElementById("cumulScoreCPU").innerHTML = scoreTextCpu;
 }
-
-let score1 = [sessionStorage.setItem('scoreAHum', 1), sessionStorage.setItem('scoreACpu', 0)];
-
-let score2 = [sessionStorage.setItem('scoreAHum', 0), sessionStorage.setItem('scoreACpu', 1)];
-
-let score3 = [sessionStorage.setItem('scoreAHum', 0), sessionStorage.setItem('scoreACpu', 0)];
-
-//if(document.getElementById("cumulScoreHum") == );
-//sessionStorage.setItem('R1', JSON.stringify(score1))
-
-/*8let seshACpu = (" CPU: ") + (number);
-
-let seshBCpu = (" CPU: ") + (sesh());
-
-let seshCCpu = (" CPU: ") + (number);
-
-if(sessionStorage.setItem('score', JSON.stringify(seshA))){
-    sessionStorage.setItem('cpuScore', 0)
-}*/
 
 //end round
 
