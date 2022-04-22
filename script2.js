@@ -1,4 +1,3 @@
-document.getElementById("cpuButtonDiv").setAttribute("style","visibility:hidden");
 document.getElementById("button").setAttribute("style","visibility:hidden");
 document.getElementById("pDiv").setAttribute("style","visibility:hidden");
 document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
@@ -14,9 +13,6 @@ document.getElementById("endSeriesPl").setAttribute("style", "visibility:hidden"
 document.getElementById("endSeriesCpu").setAttribute("style", "visibility:hidden");
 
 
-function showCpuButtonDiv(){
-    document.getElementById("cpuButtonDiv").setAttribute("style","visibility:visible");
-}
 
 function showButton(){
     document.getElementById("button").setAttribute("style","visibility:visible");
@@ -41,6 +37,7 @@ let cpuMove = moves[Math.floor(Math.random()*moves.length)];
 
 function showCpuMove(){
 document.getElementById("cpu-selection").innerHTML = cpuMove;
+conditional()
 }
 
 function computerMove(){
@@ -151,61 +148,61 @@ function conditional(){
 
     function showScore2(){
         //if player scored 1 in first round and scores 1 again in round two
-        if(sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
-        sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
+        if(sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 &&  document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
+        sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
         sessionStorage.setItem('scoreBHum', 2),
         sessionStorage.setItem('scoreBCpu', 0),
         document.getElementById("endSeriesPl").setAttribute("style", "visibility:visible");
         }
         // if player scored 1 in first round and stalemate in round two
-        else if (sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
-        sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
+        else if (sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
+        sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
         sessionStorage.setItem('scoreBHum', 1),
         sessionStorage.setItem('scoreBCpu', 0)
         }
         // if player scored 0 in first round (and cpu scores 1) and stalemate in round two
-        else if (sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
-        sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
+        else if (sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
+        sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
         sessionStorage.setItem('scoreBHum', 0),
         sessionStorage.setItem('scoreBCpu', 1)
         }
-        //if player scored 0 in first round and scores 1 in round two.
-        else if(sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
-        sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
+        //if player scored 0 (and cpu scored 1) in first round and scores 1 in round two.
+        else if(sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
+        sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
         sessionStorage.setItem('scoreBHum', 1),
         sessionStorage.setItem('scoreBCpu', 1)
         }
         // if player scored 1 in first round and scores 0 in round two
-        else if (sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
-        sessionStorage.getItem('scoreAHum') == 1 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
+        else if (sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
+        sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
         sessionStorage.setItem('scoreBHum', 1),
         sessionStorage.setItem('scoreBCpu', 1)
         } 
         // if player scored 0 in first round and scores 0 in round two
-        else if (sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
-        sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
+        else if (sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
+        sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
         sessionStorage.setItem('scoreBHum', 0),
         sessionStorage.setItem('scoreBCpu', 2),
         document.getElementById("endSeriesCpu").setAttribute("style", "visibility:visible");
         } 
         // if player stalemate in first round and scores 1 in round two
-        else if (sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
-        sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
+        else if (sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
+        sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
         sessionStorage.setItem('scoreBHum', 1),
         sessionStorage.setItem('scoreBCpu', 0)
         }  
         // if player stalemate in first round and scores 0 in round two
-        else if (sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
-        sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
+        else if (sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor" ||
+        sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
         sessionStorage.setItem('scoreBHum', 0),
         sessionStorage.setItem('scoreBCpu', 1)
         } 
         //if stalemate in first round and stalemate in second round
-        else if(sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
-        sessionStorage.getItem('scoreAHum') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
-            sessionStorage.setItem('scoreBHum', 0),
-            sessionStorage.setItem('scoreBCpu', 0)
-    }
+        else if(sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper" || sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor" ||
+        sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 0 && document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock"){
+        sessionStorage.setItem('scoreBHum', 0),
+        sessionStorage.setItem('scoreBCpu', 0)
+        }
     let scoreTextHum = ("Player: ") + sessionStorage.getItem('scoreBHum'); 
     let scoreTextCpu = ("CPU: ") + sessionStorage.getItem('scoreBCpu');
 
@@ -213,60 +210,4 @@ function conditional(){
     document.getElementById("cumulScoreCPU").innerHTML = scoreTextCpu;
 }
 
-
-
-/*let seshD = ("Player: ") + (getPrevScore()++) + (" CPU: ") + (number);
-
-let seshE = ("Player: ") + (number) + (" CPU: ") + (sesh()++);
-
-let seshF = ("Player: ") + (number) + (" CPU: ") + (number);
-
-function showScore2(){
-        //document.getElementById("scoreA", "scoreB", "scoreC").setAttribute("style", "visibility: hidden")
-
-        if (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper" || document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor" ||
-        document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock"){
-            return sessionStorage.setItem('score', JSON.stringify(seshD),
-            document.getElementById("endSeriesPl").setAttribute("style", "visibility:visible")        
-        }
-        else if (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove == "Paper" || (showScore1() == document.getElementById("scoreB") && (document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Scissor") ||
-        (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Rock"){
-            return document.getElementById("scoreE").setAttribute("style", "visibility:visible"),
-            document.getElementById("endSeriesCpu").setAttribute("style", "visibility:visible");    
-        } 
-        else if (showScore1() == document.getElementById("scoreC") && (document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper") || (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor") ||
-        (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock")){
-            return document.getElementById("scoreF").setAttribute("style", "visibility:visible");
-        }
-        else if (showScore1() == document.getElementById("scoreA") && (document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper") || (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor") ||
-        (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock")){
-            return document.getElementById("scoreH").setAttribute("style", "visibility:visible");
-        }
-        else if (showScore1() == document.getElementById("scoreB") && (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper") || (showScore1() == document.getElementById("scoreA") && (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor") ||
-        (showScore1() == document.getElementById("scoreA") && (document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock")))){
-            return document.getElementById("scoreG").setAttribute("style", "visibility:visible");
-        }
-        else if (showScore1() == document.getElementById("scoreA") && (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Paper") || (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Scissor") ||
-        (document.getElementById("humanSelection").innerHTML == "Paper" && cpuMove == "Rock")){
-            return document.getElementById("scoreH").setAttribute("style", "visibility:visible");
-        }
-        else if (showScore1() == document.getElementById("scoreB") && (document.getElementById("humanSelection").innerHTML== "Paper" && cpuMove  == "Paper") || (document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove  == "Scissor") ||
-        (document.getElementById("humanSelection").innerHTML == "Rock" && cpuMove  == "Rock")){
-            return document.getElementById("scoreI").setAttribute("style", "visibility:visible");
-    }
-    
-        sessionStorage.getItem('score')
-}*/
-
-//sessionStorage.getItem('score')
- 
-/*if((showScore1() == document.getElementById("scoreA").setAttribute("style", "visibility:visible"))){
-    document.getElementById("scoreB", "scoreC").setAttribute("style", "visibility: hidden")
-}
-else if((showScore1() == document.getElementById("scoreB").setAttribute("style", "visibility:visible"))){
-    document.getElementById("scoreA", "scoreC").setAttribute("style", "visibility: hidden")
-}
-else if((showScore1() == document.getElementById("scoreC").setAttribute("style", "visibility:visible"))){
-    document.getElementById("scoreA", "scoreB").setAttribute("style", "visibility: hidden")
-}*/
 //end round

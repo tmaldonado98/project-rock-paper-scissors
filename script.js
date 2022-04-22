@@ -1,12 +1,7 @@
-document.getElementById("cpuButtonDiv").setAttribute("style","visibility:hidden");
 document.getElementById("button").setAttribute("style","visibility:hidden");
 document.getElementById("pDiv").setAttribute("style","visibility:hidden");
 document.getElementById("nextRound").setAttribute("style", "visibility:hidden");
-//document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
-
-function showCpuButtonDiv(){
-    document.getElementById("cpuButtonDiv").setAttribute("style","visibility:visible");
-}
+document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
 
 function showButton(){
     document.getElementById("button").setAttribute("style","visibility:visible");
@@ -16,9 +11,9 @@ function showPDiv(){
     document.getElementById("pDiv").setAttribute("style", "visibility:visible");
 }
 
-/*function showPlayAgain(){
+function showPlayAgain(){
     document.getElementById("playAgain").setAttribute("style", "visibility:visible");
-}*/
+}
 
 function showNextRound (){
     document.getElementById("nextRound").setAttribute("style", "visibility:visible");
@@ -30,7 +25,8 @@ let moves = ["Rock", "Paper", "Scissor"];
 let cpuMove = moves[Math.floor(Math.random()*moves.length)];
 
 function showCpuMove(){
-document.getElementById("cpu-selection").innerHTML = cpuMove;
+document.getElementById("cpu-selection").innerHTML = cpuMove,
+conditional()
 }
 
 function computerMove(){
