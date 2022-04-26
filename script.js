@@ -1,10 +1,10 @@
-document.getElementById("button").setAttribute("style","visibility:hidden");
+document.getElementById("resultButton").setAttribute("style","visibility:hidden");
 document.getElementById("pDiv").setAttribute("style","visibility:hidden");
 document.getElementById("nextRound").setAttribute("style", "visibility:hidden");
 document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
 
 function showButton(){
-    document.getElementById("button").setAttribute("style","visibility:visible");
+    document.getElementById("resultButton").setAttribute("style","visibility:visible");
 }
 
 function showPDiv(){
@@ -18,6 +18,11 @@ function showPlayAgain(){
 function showNextRound (){
     document.getElementById("nextRound").setAttribute("style", "visibility:visible");
 }
+
+let resultTextH = document.querySelector("#cumulScoreHum"); 
+let resultTextC = document.querySelector("#cumulScoreCPU");
+resultTextH.style.color = "white";
+resultTextC.style.color = "white";
 
 //
 let moves = ["Rock", "Paper", "Scissor"]; 
@@ -76,7 +81,7 @@ function three(){
 } 
 
 function four(){
-    return  document.getElementById("round-result").innerHTML = "You win round! " + possibleOutcomes[0];
+    return  document.getElementById("round-result").innerHTML = "You win the round! " + possibleOutcomes[0];
 } 
 
 function five(){

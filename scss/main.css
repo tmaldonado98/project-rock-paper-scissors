@@ -1,0 +1,81 @@
+.mainDiv {
+  background-image: url("../../../generalImages/image1.jpg");
+  padding: 5em 10em;
+}
+
+body {
+  background-color: #3d383b;
+  margin: 0;
+}
+
+body p, body #pDiv {
+  color: #ffdada;
+  font-family: font-family "Merienda", "Impact", "Georgia";
+  font-size: 24px;
+  font-weight: font-weight 555;
+}
+
+body #humanSelection, body #cpu-selection {
+  font-family: font-family "Merienda", "Impact", "Georgia";
+  font-size: 22px;
+  color: azure;
+}
+
+body #round-result {
+  color: white;
+}
+
+header {
+  color: white;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttons div {
+  padding: 0, 10%;
+  margin: 0, auto;
+}
+
+.buttons #rock, .buttons #paper, .buttons #scissor {
+  background-color: #4d4d4d;
+  color: white;
+  width: 300px;
+  height: 200px;
+  font-family: 'Merienda', 'Impact', 'Georgia';
+  font-size: 30px;
+}
+
+#button, #playAgain, #nextRound {
+  background-color: #2f1717;
+  width: 100px;
+  height: 30px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #1F2937;
+  color: white;
+  height: 100px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+footer p, footer body #pDiv, body footer #pDiv {
+  margin: auto;
+}
+/*# sourceMappingURL=main.css.map */

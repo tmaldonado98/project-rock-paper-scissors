@@ -7,18 +7,26 @@
     </head>
 
 <body>
-    
-   
-    <form>
+    <header>
         <h1>Rock, Paper, Scissor</h1>
         <h2>The best of 3 rounds wins</h2><br>
         <h3>Round 2</h3>
-        <select onclick="cpuMove, console.log(cpuMove)" id="form">
-            <option onclick="popNoSelection()" id="none">Select an option.</option>
-            <option onclick="popRock(), showButton()" id="rock">Rock</option>
-            <option onclick="popPaper(), showButton()" id="paper">Paper</option>
-            <option onclick="popScissor(), showButton()" id="scissor">Scissor</option>
-        </select>
+    </header>
+   
+    <form>
+        
+        
+        <button type="button" onclick="popRock(), showButton()" id="rock">Rock</button>
+        <button type="button" onclick="popPaper(), showButton()" id="paper">Paper</button>
+        <button type="button" onclick="popScissor(), showButton()" id="scissor">Scissor</button>
+
+            
+           <!-- <select onclick="cpuMove, console.log(cpuMove)" id="form">
+                <option onclick="popNoSelection()" id="none">Select an option.</option>
+                <option </option>
+                <option </option>
+                <option </option>
+            </select>-->
         <p>Your selection: </p> 
         <h4 id="humanSelection"></h4>
     <br>
@@ -46,12 +54,12 @@
     </form>
 
     <h2 id="round-result"></h2>
-<br><br><br>
-<button id="playAgain"><a href="index.html">Start Over</a></button>
+<br>
 
+<a href="index.html", id="playAgain"><button>Start Over</button></a>
 <br><br>
 
-<button id="nextRound"><a href="./round3.html">Play Next Round</a></button>
+<a href="./round3.html", id="nextRound"><button>Play Next Round</button></a>
 
 
 <h4 id="cumulScoreHum"></h4>
