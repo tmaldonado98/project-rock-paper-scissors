@@ -3,10 +3,29 @@
           box-sizing: border-box;
 }
 
+.mainDiv:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(81, 81, 81, 0.164);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 .mainDiv {
   background-image: url("../../../generalImages/image1.jpg");
   background-color: black;
   padding: 5em 10em;
+  background-position: center;
+  position: relative;
+}
+
+.mainDiv > * {
+  z-index: 10;
+  position: relative;
 }
 
 .headerDiv {
@@ -17,7 +36,6 @@
 }
 
 body {
-  background-color: #3d383b;
   margin: 0;
 }
 
@@ -44,23 +62,16 @@ body #round-result {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  outline: none;
 }
 
-.buttons .rpsBtn {
-  background-color: background-color rgba(0, 0, 0, 0);
-  padding: 0, 10%;
-  margin: 0, auto;
-  color: black;
-}
-
-.buttons #rock, .buttons #paper, .buttons #scissor {
+#rock, #paper, #scissor {
+  background-color: transparent;
+  width: 400px;
+  height: 350px;
   border-width: 10px;
   border-color: black;
   border-style: outset;
-  width: 300px;
-  height: 200px;
-  font-family: 'Merienda', 'Impact', 'Georgia';
-  font-size: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,26 +79,53 @@ body #round-result {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.buttons #rock #rock p, .buttons #paper #rock p, .buttons #scissor #rock p, .buttons #rock #paper p, .buttons #paper #paper p, .buttons #scissor #paper p, .buttons #rock #scissor p, .buttons #paper #scissor p, .buttons #scissor #scissor p, .buttons #rock #rock body #pDiv, body .buttons #rock #rock #pDiv, .buttons #paper #rock body #pDiv, body .buttons #paper #rock #pDiv, .buttons #scissor #rock body #pDiv, body .buttons #scissor #rock #pDiv, .buttons #rock #paper body #pDiv, body .buttons #rock #paper #pDiv, .buttons #paper #paper body #pDiv, body .buttons #paper #paper #pDiv, .buttons #scissor #paper body #pDiv, body .buttons #scissor #paper #pDiv, .buttons #rock #scissor body #pDiv, body .buttons #rock #scissor #pDiv, .buttons #paper #scissor body #pDiv, body .buttons #paper #scissor #pDiv, .buttons #scissor #scissor body #pDiv, body .buttons #scissor #scissor #pDiv {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 10px 14px 14px rgba(0, 0, 0, 0.6);
+          box-shadow: 10px 14px 14px rgba(0, 0, 0, 0.6);
 }
 
-.buttons #rock #rockImg, .buttons #paper #rockImg, .buttons #scissor #rockImg {
+#rock p, #paper p, #scissor p, #rock body #pDiv, body #rock #pDiv, #paper body #pDiv, body #paper #pDiv, #scissor body #pDiv, body #scissor #pDiv {
+  border: 5px solid black;
+  background-color: rgba(0, 0, 0, 0.472);
+  padding: 0;
+  margin: 0, auto;
+  color: antiquewhite;
+  font-family: 'Merienda', 'Impact', 'Georgia';
+  font-size: 45px;
+  font-weight: bolder;
+}
+
+/*.buttonPBorder {
+            background-color: ;
+            margin-top: 7%;
+            height:auto;
+            width: auto;
+            //outline: 5px;
+            border-color: pink;
+        }*/
+#rockImg, #paperImg, #scissorImg {
   margin: auto;
-  width: 30%;
+  width: 40%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#paperImg, #scissorImg {
+  height: auto;
+}
+
+#scissorImg {
+  height: 80%;
+  width: 50%;
 }
 
 #button, #playAgain, #nextRound {
