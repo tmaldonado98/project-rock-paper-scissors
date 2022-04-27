@@ -1,6 +1,19 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .mainDiv {
   background-image: url("../../../generalImages/image1.jpg");
+  background-color: black;
   padding: 5em 10em;
+}
+
+.headerDiv {
+  border-width: width 22px;
+  border-color: border-color white;
+  width: 50%;
+  color: white;
 }
 
 body {
@@ -8,24 +21,13 @@ body {
   margin: 0;
 }
 
-body p, body #pDiv {
-  color: #ffdada;
-  font-family: font-family "Merienda", "Impact", "Georgia";
-  font-size: 24px;
-  font-weight: font-weight 555;
-}
-
 body #humanSelection, body #cpu-selection {
   font-family: font-family "Merienda", "Impact", "Georgia";
-  font-size: 22px;
+  font-size: 30px;
   color: azure;
 }
 
 body #round-result {
-  color: white;
-}
-
-header {
   color: white;
 }
 
@@ -44,18 +46,48 @@ header {
           align-items: center;
 }
 
-.buttons div {
+.buttons .rpsBtn {
+  background-color: background-color rgba(0, 0, 0, 0);
   padding: 0, 10%;
   margin: 0, auto;
+  color: black;
 }
 
 .buttons #rock, .buttons #paper, .buttons #scissor {
-  background-color: #4d4d4d;
-  color: white;
+  border-width: 10px;
+  border-color: black;
+  border-style: outset;
   width: 300px;
   height: 200px;
   font-family: 'Merienda', 'Impact', 'Georgia';
   font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.buttons #rock #rock p, .buttons #paper #rock p, .buttons #scissor #rock p, .buttons #rock #paper p, .buttons #paper #paper p, .buttons #scissor #paper p, .buttons #rock #scissor p, .buttons #paper #scissor p, .buttons #scissor #scissor p, .buttons #rock #rock body #pDiv, body .buttons #rock #rock #pDiv, .buttons #paper #rock body #pDiv, body .buttons #paper #rock #pDiv, .buttons #scissor #rock body #pDiv, body .buttons #scissor #rock #pDiv, .buttons #rock #paper body #pDiv, body .buttons #rock #paper #pDiv, .buttons #paper #paper body #pDiv, body .buttons #paper #paper #pDiv, .buttons #scissor #paper body #pDiv, body .buttons #scissor #paper #pDiv, .buttons #rock #scissor body #pDiv, body .buttons #rock #scissor #pDiv, .buttons #paper #scissor body #pDiv, body .buttons #paper #scissor #pDiv, .buttons #scissor #scissor body #pDiv, body .buttons #scissor #scissor #pDiv {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttons #rock #rockImg, .buttons #paper #rockImg, .buttons #scissor #rockImg {
+  margin: auto;
+  width: 30%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #button, #playAgain, #nextRound {

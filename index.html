@@ -25,51 +25,62 @@
 
     <section>    
             <div class="buttons">
-                <div><button type="button" onclick="popRock(), showButton()" id="rock">Rock</button></div>
-                <div><button type="button" onclick="popPaper(), showButton()" id="paper">Paper</button></div>
-                <div><button type="button" onclick="popScissor(), showButton()" id="scissor">Scissor</button></div>
+                <div class="rpsBtn"><button type="button" onclick="popRock(), showButton()" id="rock"><p>Rock</p>
+                    <img src="./images/rock48.png", id="rockImg"></button></div>
+                <div class="rpsBtn"><button type="button" onclick="popPaper(), showButton()" id="paper"><p>Paper</p>
+                    <img src="./images/paper.gif", id="paperImg"></button></div>
+                <div class="rpsBtn"><button type="button" onclick="popScissor(), showButton()" id="scissor"><p>Scissor</p>
+                    <img src="./images/scissor.gif", id="scissorImg"></button></div>
             </div>
             <br>           
             <br>
+    </section>
 
+    <section>
             <div class="humSelBox">
                 <p>Your selection: </p> 
             <h4 id="humanSelection"></h4>
             </div>
-            
-        <br>           
+    </section>        
+    
+    <br>
+    <section>           
             <div class="cpuSelBox">
                 <div id="pDiv">
                     <p>CPU's selection: </p>
                 </div> 
                 <h4 id="cpu-selection"></h4>
             </div>
-        
+    </section>
         <br>
         <br>
         <br>
-
+    <section>
         <div class="resultBtnBox">
             <input onclick="conditional(), showCpuMove(), showPDiv(), showScore1(), showNextRound(), showPlayAgain()" , 
             id="resultButton" type="button" value="Click to view results.">
         </div>
-
-        <div id="resultDiv">
-            
+    
+        <div id="resultDivBox">
             <h2 id="round-result"></h2>
-            <br>
-            <input id="playAgain" type="button", value="Start Over" onclick="history.go(0)">
         </div>     
+    </section>
 
+        <br>
+    
+    <section>    
+        <input id="playAgain" type="button", value="Start Over" onclick="history.go(0)">
         
-    <br><br>
+        <br><br>
 
-    <a href="./round2.html", id="nextRound"><button>Play Next Round</button></a>
+        <a href="./round2.html", id="nextRound"><button>Play Next Round</button></a>
 
-    <h4 id="cumulScoreHum"></h4>
-    <h4 id="cumulScoreCPU"></h4>
-
-</section>
+    
+        <div class="cumulScoreBox">
+            <h4 id="cumulScoreHum"></h4>
+            <h4 id="cumulScoreCPU"></h4>
+        </div>
+    </section>
 </div>
 </main>
 
