@@ -25,6 +25,10 @@ $smallTextColor: rgb(255, 218, 218);
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+}
+
 .mainDiv:after{
     content: "";
     display: block;
@@ -40,7 +44,7 @@ $smallTextColor: rgb(255, 218, 218);
 .mainDiv{
     background-image: url("../../../generalImages/image4.jpg");
     background-color: black;
-    padding: 0em 10em 5em 10em;
+    padding: 0em 10em 2.65em 10em;
     background-position:center;
     background-size: cover;
     position: relative;
@@ -89,31 +93,6 @@ $smallTextColor: rgb(255, 218, 218);
     top: 2em; 
     max-width: fit-content;
     font-size: 22px;
-}
-
-body{
-    margin:0;
-
-    #yrSel {
-        font-family: $smallFontFam;
-        font-size: 18px;
-        color:azure;
-    }
-    #humanSelection{
-        font-family: $smallFontFam;
-        font-size: 30px;
-        color:azure;
-    }
-    #pDiv{
-        @extend p;
-    }
-    #cpu-selection{
-        @extend #humanSelection;
-    }
-    #round-result{
-        color: $headerColor;
-    }
-   
 }
 
 .buttonsDiv {
@@ -191,27 +170,46 @@ body{
         }
     }
 
+#textAndButtons {
+    position: absolute;
+    top: 0;
+    margin-bottom: 70%;
 
-#button{
-    background-color: $secondaryColorBtn;
-    width: 100px;
-    height: 30px;
+    
+    #yrSel {
+        font-family: $smallFontFam;
+        font-size: 18px;
+        color:azure;
+    }
+    #humanSelection{
+        font-family: $smallFontFam;
+        font-size: 30px;
+        color:azure;
+    }
+ 
+    #cpu-selection{
+        @extend #humanSelection;
+    }
+    #round-result{
+        color: $headerColor;
+    }
 }
-#playAgain{
+
+/*    #playAgain{
     @extend #button;
 }
 
 
 #nextRound{
     @extend #button;
-}
+}*/
 
 
 footer {
     display: flex;
     background-color: #1F2937;
     color: white;
-    height: 100px;
+    height: 60px;
     font-size: 16px;
     font-weight: bold;
 }

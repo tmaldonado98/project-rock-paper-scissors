@@ -3,6 +3,10 @@
           box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 .mainDiv:after {
   content: "";
   display: block;
@@ -18,7 +22,7 @@
 .mainDiv {
   background-image: url("../../../generalImages/image4.jpg");
   background-color: black;
-  padding: 0em 10em 5em 10em;
+  padding: 0em 10em 2.65em 10em;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -76,26 +80,6 @@
   max-width: -moz-fit-content;
   max-width: fit-content;
   font-size: 22px;
-}
-
-body {
-  margin: 0;
-}
-
-body #yrSel {
-  font-family: font-family "Merienda", "Impact", "Georgia";
-  font-size: 18px;
-  color: azure;
-}
-
-body #humanSelection, body #cpu-selection {
-  font-family: font-family "Merienda", "Impact", "Georgia";
-  font-size: 30px;
-  color: azure;
-}
-
-body #round-result {
-  color: white;
 }
 
 .buttonsDiv {
@@ -193,24 +177,48 @@ body #round-result {
   opacity: 1;
 }
 
-#button, #playAgain, #nextRound {
-  background-color: #2f1717;
-  width: 100px;
-  height: 30px;
+#textAndButtons {
+  position: absolute;
+  top: 0;
+  margin-bottom: 70%;
 }
 
+#textAndButtons #yrSel {
+  font-family: font-family "Merienda", "Impact", "Georgia";
+  font-size: 18px;
+  color: azure;
+}
+
+#textAndButtons #humanSelection, #textAndButtons #cpu-selection {
+  font-family: font-family "Merienda", "Impact", "Georgia";
+  font-size: 30px;
+  color: azure;
+}
+
+#textAndButtons #round-result {
+  color: white;
+}
+
+/*    #playAgain{
+    @extend #button;
+}
+
+
+#nextRound{
+    @extend #button;
+}*/
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #1F2937;
   color: white;
-  height: 100px;
+  height: 60px;
   font-size: 16px;
   font-weight: bold;
 }
 
-footer p, footer body #pDiv, body footer #pDiv {
+footer p {
   margin: auto;
 }
 /*# sourceMappingURL=main.css.map */

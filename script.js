@@ -59,7 +59,7 @@ function popNoSelection(){
 function popRock(){
     document.getElementById("humanSelection").innerHTML = "Rock",
     document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
-    document.querySelector(".headerDiv").setAttribute("style","visibility:hidden"),
+    document.querySelector("header").setAttribute("style","visibility:hidden"),
     document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 
@@ -67,7 +67,7 @@ function popRock(){
 function popPaper(){
     document.getElementById("humanSelection").innerHTML = "Paper",
     document.getElementById("yrSel").setAttribute("style", "visibility:visible");
-    document.querySelector(".headerDiv").setAttribute("style","visibility:hidden"),
+    document.querySelector("header").setAttribute("style","visibility:hidden"),
     document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 
@@ -75,7 +75,7 @@ function popPaper(){
 function popScissor(){
     document.getElementById("humanSelection").innerHTML = "Scissor",
     document.getElementById("yrSel").setAttribute("style", "visibility:visible");
-    document.querySelector(".headerDiv").setAttribute("style","visibility:hidden"),
+    document.querySelector("header").setAttribute("style","visibility:hidden"),
     document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 //

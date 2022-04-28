@@ -13,88 +13,72 @@
 
 <body>
     <div class="mainDiv">   
-    <header>
-        <div class="headerDiv">
-            <h1>Rock, Paper, Scissor</h1>
-            <h2>The best of 3 rounds wins</h2>
-            <h3>Round 1</h3>
-        </div>
-        <div class="cumulScoreBox">
-            <h4 id="cumulScoreHum"></h4>
-            <h4 id="cumulScoreCPU"></h4>
-        </div>
-    </header>
-
-
-    <main>
-
-    <section>    
-            <div class="buttonsDiv">
-                <button type="button" onclick="popRock(), showButton()" id="rock">
-                    <img src="./images/rock48.png", id="rockImg"></button>
-                <button type="button" onclick="popPaper(), showButton()" id="paper">
-                    <img src="./images/paper transparent background.gif", id="paperImg"></button>
-                <button type="button" onclick="popScissor(), showButton()" id="scissor">
-                   <img src="./images/scissor ransarentak.gif", id="scissorImg"></button>
+        <header>
+            <div class="headerDiv">
+                <h1>Rock, Paper, Scissor</h1>
+                <h2>The best of 3 rounds wins</h2>
+                <h3>Round 1</h3>
             </div>
-            <br>    <!--onmouseover="showRockImg()", onmouseout="hideRockImg()", 
-                    onmouseover="showPaperImg()", onmouseout="hidePaperImg()", 
-                    onmouseover="showScissorImg()", onmouseout="hideScissorImg()", 
-            -->       
-            <br>
-    </section>
+        </header>
 
-    <section>
+
+        <main>
+
+        <section>    
+                <div class="buttonsDiv">
+                    <button type="button" onclick="popRock(), showButton()" id="rock">
+                        <img src="./images/rock48.png", id="rockImg"></button>
+                    <button type="button" onclick="popPaper(), showButton()" id="paper">
+                        <img src="./images/paper transparent background.gif", id="paperImg"></button>
+                    <button type="button" onclick="popScissor(), showButton()" id="scissor">
+                    <img src="./images/scissor ransarentak.gif", id="scissorImg"></button>
+                </div>
+                <br>    <!--onmouseover="showRockImg()", onmouseout="hideRockImg()", 
+                        onmouseover="showPaperImg()", onmouseout="hidePaperImg()", 
+                        onmouseover="showScissorImg()", onmouseout="hideScissorImg()", 
+                -->       
+                <br>
+        </section>
+
+        <section id="textAndButtons">
+            
+            <div class="cumulScoreBox">
+                <h4 id="cumulScoreHum"></h4>
+                <h4 id="cumulScoreCPU"></h4>
+            </div>
+
             <div class="humSelBox">
                 <p id="yrSel">Your selection: </p> 
             <h4 id="humanSelection"></h4>
             </div>
-    </section>        
-    
-    <br>
-    <section>           
+            
             <div class="cpuSelBox">
                 <div id="pDiv">
                     <p>CPU's selection: </p>
                 </div> 
                 <h4 id="cpu-selection"></h4>
             </div>
-    </section>
-        <br>
-        <br>
-        <br>
-    <section>
-        <div class="resultBtnBox">
-            <input onclick="conditional(), showCpuMove(), showPDiv(), showScore1(), showNextRound(), showPlayAgain()" , 
-            id="resultButton" type="button" value="Click to view results.">
-        </div>
-    
-        <div id="resultDivBox">
-            <h2 id="round-result"></h2>
-        </div>     
-    </section>
 
-        <br>
-    
-    <section>    
-        <input id="playAgain" type="button", value="Start Over" onclick="history.go(0)">
+            <div class="resultBtnBox">
+                <input onclick="conditional(), showCpuMove(), showPDiv(), showScore1(), showNextRound(), showPlayAgain()" , 
+                id="resultButton" type="button" value="Click to view results.">
+            </div>
         
-        <br><br>
+            <div id="resultDivBox">
+                <h2 id="round-result"></h2>
+            </div> 
+            
+            <input id="playAgain" type="button", value="Start Over" onclick="history.go(0)">
 
-        <a href="./round2.html", id="nextRound"><button>Play Next Round</button></a>
-
-    
-    </section>
-</div>
+            <a href="./round2.html", id="nextRound"><button>Play Next Round</button></a>
+        </section>
+    </div>
 </main>
 
 <footer>
     <p>
-        Copyright © Tomas Maldonado 2022
+        Tomas Maldonado 2022
     </p>
 </footer>
-
 </body>
-
-
 </html>
