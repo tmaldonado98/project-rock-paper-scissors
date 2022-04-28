@@ -2,6 +2,8 @@ document.getElementById("resultButton").setAttribute("style","visibility:hidden"
 document.getElementById("pDiv").setAttribute("style","visibility:hidden");
 document.getElementById("nextRound").setAttribute("style", "visibility:hidden");
 document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
+document.getElementById("yrSel").setAttribute("style", "visibility:hidden");
+
 
 function showButton(){
     document.getElementById("resultButton").setAttribute("style","visibility:visible");
@@ -17,6 +19,11 @@ function showPlayAgain(){
 
 function showNextRound (){
     document.getElementById("nextRound").setAttribute("style", "visibility:visible");
+}
+
+function showYrSel(){
+    document.getElementById("yrSel").setAttribute("style", "visibility:visible");
+
 }
 
 let resultTextH = document.querySelector("#cumulScoreHum"); 
@@ -43,23 +50,33 @@ function computerMove(){
 
 
 //
+
 function popNoSelection(){
     document.getElementById("humanSelection").innerHTML = "No option selected."
 };
 
 
 function popRock(){
-    document.getElementById("humanSelection").innerHTML = "Rock"
+    document.getElementById("humanSelection").innerHTML = "Rock",
+    document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
+    document.querySelector(".headerDiv").setAttribute("style","visibility:hidden"),
+    document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 
 
 function popPaper(){
-    document.getElementById("humanSelection").innerHTML = "Paper"
+    document.getElementById("humanSelection").innerHTML = "Paper",
+    document.getElementById("yrSel").setAttribute("style", "visibility:visible");
+    document.querySelector(".headerDiv").setAttribute("style","visibility:hidden"),
+    document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 
 
 function popScissor(){
-    document.getElementById("humanSelection").innerHTML = "Scissor"
+    document.getElementById("humanSelection").innerHTML = "Scissor",
+    document.getElementById("yrSel").setAttribute("style", "visibility:visible");
+    document.querySelector(".headerDiv").setAttribute("style","visibility:hidden"),
+    document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 //
 

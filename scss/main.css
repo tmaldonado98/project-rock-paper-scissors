@@ -16,10 +16,11 @@
 }
 
 .mainDiv {
-  background-image: url("../../../generalImages/image1.jpg");
+  background-image: url("../../../generalImages/image4.jpg");
   background-color: black;
-  padding: 5em 10em;
+  padding: 0em 10em 5em 10em;
   background-position: center;
+  background-size: cover;
   position: relative;
 }
 
@@ -29,14 +30,62 @@
 }
 
 .headerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2em;
+  color: #4c4843;
+}
+
+.headerDiv h1, .headerDiv h2 {
   border-width: width 22px;
-  border-color: border-color white;
-  width: 50%;
-  color: white;
+  border-color: black;
+}
+
+.headerDiv h1 {
+  font-size: 55px;
+  margin-top: 0;
+}
+
+.headerDiv h2 {
+  font-size: 35px;
+  margin-top: 0;
+}
+
+.headerDiv h3 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.cumulScoreBox {
+  position: absolute;
+  float: left;
+  margin: 0;
+  top: 2em;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 22px;
 }
 
 body {
   margin: 0;
+}
+
+body #yrSel {
+  font-family: font-family "Merienda", "Impact", "Georgia";
+  font-size: 18px;
+  color: azure;
 }
 
 body #humanSelection, body #cpu-selection {
@@ -49,7 +98,7 @@ body #round-result {
   color: white;
 }
 
-.buttons {
+.buttonsDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,14 +112,17 @@ body #round-result {
       -ms-flex-align: center;
           align-items: center;
   outline: none;
+  margin-top: 3rem;
 }
 
 #rock, #paper, #scissor {
   background-color: transparent;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
   width: 400px;
   height: 350px;
   border-width: 10px;
-  border-color: black;
+  border-color: rgba(76, 72, 67, 0.445);
   border-style: outset;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,25 +141,19 @@ body #round-result {
           box-shadow: 10px 14px 14px rgba(0, 0, 0, 0.6);
 }
 
-#rock p, #paper p, #scissor p, #rock body #pDiv, body #rock #pDiv, #paper body #pDiv, body #paper #pDiv, #scissor body #pDiv, body #scissor #pDiv {
-  border: 5px solid black;
-  background-color: rgba(0, 0, 0, 0.472);
-  padding: 0;
-  margin: 0, auto;
-  color: antiquewhite;
-  font-family: 'Merienda', 'Impact', 'Georgia';
-  font-size: 45px;
-  font-weight: bolder;
-}
-
-/*.buttonPBorder {
-            background-color: ;
-            margin-top: 7%;
-            height:auto;
-            width: auto;
-            //outline: 5px;
-            border-color: pink;
-        }*/
+/*#rock p, #paper p, #scissor p {
+        opacity: 0;
+        width: 4.5em;
+        border: 2px thin black;
+        background-color: rgba(222, 151, 80, 0.604);
+        box-shadow: 2px 2px 5px 5px black;
+        padding: 0;
+        margin: 0, auto;
+        color: rgb(76, 72, 67);
+        font-family: 'Merienda', 'Impact', 'Georgia';
+        font-size: 45px;  
+        font-weight: bolder; 
+    }*/
 #rockImg, #paperImg, #scissorImg {
   margin: auto;
   width: 40%;
@@ -117,6 +163,7 @@ body #round-result {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
 }
 
 #paperImg, #scissorImg {
@@ -124,8 +171,26 @@ body #round-result {
 }
 
 #scissorImg {
-  height: 80%;
+  height: 50%;
   width: 50%;
+}
+
+#rock:hover, #paper:hover, #scissor:hover {
+  /*#rock p, #paper p, #scissor p {
+            transition-duration: 500ms;
+            opacity: 1;
+        }*/
+  -webkit-transition-duration: 650ms;
+          transition-duration: 650ms;
+  border-width: 19px;
+  border-color: rgba(76, 72, 67, 0.954);
+  border-style: double;
+}
+
+#rock:hover #rockImg, #rock:hover #paperImg, #rock:hover #scissorImg, #rock:hover #paperImg, #rock:hover #scissorImg, #rock:hover #scissorImg, #paper:hover #rockImg, #paper:hover #paperImg, #paper:hover #scissorImg, #paper:hover #paperImg, #paper:hover #scissorImg, #paper:hover #scissorImg, #scissor:hover #rockImg, #scissor:hover #paperImg, #scissor:hover #scissorImg, #scissor:hover #paperImg, #scissor:hover #scissorImg, #scissor:hover #scissorImg {
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  opacity: 1;
 }
 
 #button, #playAgain, #nextRound {

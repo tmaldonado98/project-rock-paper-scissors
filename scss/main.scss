@@ -38,10 +38,11 @@ $smallTextColor: rgb(255, 218, 218);
 }
 
 .mainDiv{
-    background-image: url("../../../generalImages/image1.jpg");
+    background-image: url("../../../generalImages/image4.jpg");
     background-color: black;
-    padding: 5em 10em;
+    padding: 0em 10em 5em 10em;
     background-position:center;
+    background-size: cover;
     position: relative;
     }
 
@@ -50,22 +51,58 @@ $smallTextColor: rgb(255, 218, 218);
     position: relative;
 }
 
+.headerDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2em;
+    color: rgb(76, 72, 67);
+}
 
-
-.headerDiv {
+.headerDiv h1, .headerDiv h2 {
     border-width: $boxBorderWidth;
-    border-color: $boxBorderColor;
-    width: 50%;
-    color: $headerColor;
+    border-color: black;
+    
+}
+
+.headerDiv h1{
+    font-size: 55px;
+    margin-top: 0;
+}
+
+.headerDiv h2{
+    font-size: 35px;
+    margin-top: 0;
+    //margin-bottom: 45px;
+}
+
+.headerDiv h3 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.cumulScoreBox {
+    position: absolute;
+    float: left;
+    margin: 0;
+    top: 2em; 
+    max-width: fit-content;
+    font-size: 22px;
 }
 
 body{
     margin:0;
 
+    #yrSel {
+        font-family: $smallFontFam;
+        font-size: 18px;
+        color:azure;
+    }
     #humanSelection{
         font-family: $smallFontFam;
         font-size: 30px;
-        color:azure
+        color:azure;
     }
     #pDiv{
         @extend p;
@@ -79,22 +116,23 @@ body{
    
 }
 
-.buttons {
+.buttonsDiv {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     outline: none;
+    margin-top: 3rem;
  //   
 }
-        
-        #rock{
+    
+    #rock, #paper, #scissor{
         background-color: transparent;
-        
+        transition-duration: 500ms;
         width: 400px;    
         height: 350px;
         border-width: 10px;
-        border-color: black;
+        border-color: rgba(76, 72, 67, 0.445);
         border-style:outset;
              
         display: flex;
@@ -103,50 +141,55 @@ body{
         align-items: center;
         box-shadow: 10px 14px 14px  rgba(0, 0, 0, 0.6);
         }
+        
+    /*#rock p, #paper p, #scissor p {
+        opacity: 0;
+        width: 4.5em;
+        border: 2px thin black;
+        background-color: rgba(222, 151, 80, 0.604);
+        box-shadow: 2px 2px 5px 5px black;
+        padding: 0;
+        margin: 0, auto;
+        color: rgb(76, 72, 67);
+        font-family: 'Merienda', 'Impact', 'Georgia';
+        font-size: 45px;  
+        font-weight: bolder; 
+    }*/
 
-        #rock p {
-            border: 5px solid black;
-            background-color: rgba(0, 0, 0, 0.472);
-            padding: 0;
-            margin: 0, auto;
-            color: antiquewhite;
-            font-family: 'Merienda', 'Impact', 'Georgia';
-            font-size: 45px;  
-            font-weight: bolder; 
-        }
+    #rockImg{
+        margin: auto;
+        width: 40%;
+        justify-content:center;
+        align-items: center;
+        opacity: 0;
+    }
 
-        /*.buttonPBorder {
-            background-color: ;
-            margin-top: 7%;
-            height:auto;
-            width: auto;
-            //outline: 5px;
-            border-color: pink;
+    #paperImg{
+        @extend #rockImg;
+        height: auto;
+    }
+       
+    #scissorImg{
+        @extend #paperImg;
+        height: 50%;
+        width: 50%; 
+    }
+    
+    #rock:hover, #paper:hover, #scissor:hover {
+        /*#rock p, #paper p, #scissor p {
+            transition-duration: 500ms;
+            opacity: 1;
         }*/
+        transition-duration: 650ms;
+        border-width: 19px;
+        border-color: rgba(76, 72, 67, 0.954);
+        border-style:double;
 
-        #rockImg{
-            margin: auto;
-            width: 40%;
-            justify-content:center;
-            align-items: center;
+        #rockImg, #paperImg, #scissorImg {
+            transition-duration: 500ms;
+            opacity: 1;
         }
-        
-        #paper{
-            @extend #rock;
-        }
-        #paperImg{
-            @extend #rockImg;
-            height: auto;
-        }
-        
-        #scissor{
-            @extend #rock;
-        }
-        #scissorImg{
-            @extend #paperImg;
-            height: 80%;
-            width: 50%; 
-        }
+    }
 
 
 #button{
@@ -162,6 +205,7 @@ body{
 #nextRound{
     @extend #button;
 }
+
 
 footer {
     display: flex;

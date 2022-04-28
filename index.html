@@ -12,11 +12,16 @@
 
 
 <body>
-    <div class="mainDiv">
+    <div class="mainDiv">   
     <header>
         <div class="headerDiv">
             <h1>Rock, Paper, Scissor</h1>
-            <h2>The best of 3 rounds wins</h2><br><h3>Round 1</h3>
+            <h2>The best of 3 rounds wins</h2>
+            <h3>Round 1</h3>
+        </div>
+        <div class="cumulScoreBox">
+            <h4 id="cumulScoreHum"></h4>
+            <h4 id="cumulScoreCPU"></h4>
         </div>
     </header>
 
@@ -24,24 +29,24 @@
     <main>
 
     <section>    
-            <div class="buttons">
-                <div><button type="button" onclick="popRock(), showButton()" id="rock">
-                    <div class="buttonPBorder"><p>Rock</p></div>
-                    <img src="./images/rock48.png", id="rockImg"></button></div>
-                <div><button type="button" onclick="popPaper(), showButton()" id="paper">
-                    <div class="buttonPBorder"><p>Paper</p></div>
-                    <img src="./images/paper transparent background.gif", id="paperImg"></button></div>
-                <div><button type="button" onclick="popScissor(), showButton()" id="scissor">
-                    <div class="buttonPBorder"><p>Scissor</p></div>
-                    <img src="./images/scissor ransarentak.gif", id="scissorImg"></button></div>
+            <div class="buttonsDiv">
+                <button type="button" onclick="popRock(), showButton()" id="rock">
+                    <img src="./images/rock48.png", id="rockImg"></button>
+                <button type="button" onclick="popPaper(), showButton()" id="paper">
+                    <img src="./images/paper transparent background.gif", id="paperImg"></button>
+                <button type="button" onclick="popScissor(), showButton()" id="scissor">
+                   <img src="./images/scissor ransarentak.gif", id="scissorImg"></button>
             </div>
-            <br>           
+            <br>    <!--onmouseover="showRockImg()", onmouseout="hideRockImg()", 
+                    onmouseover="showPaperImg()", onmouseout="hidePaperImg()", 
+                    onmouseover="showScissorImg()", onmouseout="hideScissorImg()", 
+            -->       
             <br>
     </section>
 
     <section>
             <div class="humSelBox">
-                <p>Your selection: </p> 
+                <p id="yrSel">Your selection: </p> 
             <h4 id="humanSelection"></h4>
             </div>
     </section>        
@@ -79,10 +84,6 @@
         <a href="./round2.html", id="nextRound"><button>Play Next Round</button></a>
 
     
-        <div class="cumulScoreBox">
-            <h4 id="cumulScoreHum"></h4>
-            <h4 id="cumulScoreCPU"></h4>
-        </div>
     </section>
 </div>
 </main>
