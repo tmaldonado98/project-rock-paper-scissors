@@ -12,7 +12,18 @@
 
 
 <body>
-    <div class="mainDiv">   
+    <div class="mainDiv">  
+                                
+        <div class="cumulScoreBox">
+            <h4 id="cumulScoreHum"></h4>
+            <h4 id="cumulScoreCPU"></h4>
+            
+        </div>
+        
+        <div id="resultDivBox">
+            <h2 id="round-result"></h2>
+        </div> 
+ 
         <header>
             <div class="headerDiv">
                 <h1>Rock, Paper, Scissor</h1>
@@ -33,51 +44,39 @@
                     <button type="button" onclick="popScissor(), showButton()" id="scissor">
                     <img src="./images/scissor ransarentak.gif", id="scissorImg"></button>
                 </div>
-                <br>    <!--onmouseover="showRockImg()", onmouseout="hideRockImg()", 
-                        onmouseover="showPaperImg()", onmouseout="hidePaperImg()", 
-                        onmouseover="showScissorImg()", onmouseout="hideScissorImg()", 
-                -->       
+                <br>        
                 <br>
         </section>
 
         <section id="textAndButtons">
-            
-            <div class="cumulScoreBox">
-                <h4 id="cumulScoreHum"></h4>
-                <h4 id="cumulScoreCPU"></h4>
-            </div>
-
-            <div class="humSelBox">
+            <div id="humAndCpuSelBox">
+                
+                <div class="humSelBox">
                 <p id="yrSel">Your selection: </p> 
-            <h4 id="humanSelection"></h4>
-            </div>
+                <h4 id="humanSelection"></h4>
+                </div>
             
-            <div class="cpuSelBox">
-                <div id="pDiv">
-                    <p>CPU's selection: </p>
-                </div> 
-                <h4 id="cpu-selection"></h4>
+                <div class="cpuSelBox">
+                    <div id="pDiv">
+                        <p>CPU's selection: </p>
+                    </div> 
+                    <h4 id="cpu-selection"></h4>
+                </div>
             </div>
+        </section>  
 
-            <div class="resultBtnBox">
-                <input onclick="conditional(), showCpuMove(), showPDiv(), showScore1(), showNextRound(), showPlayAgain()" , 
-                id="resultButton" type="button" value="Click to view results.">
-            </div>
-        
-            <div id="resultDivBox">
-                <h2 id="round-result"></h2>
-            </div> 
-            
-            <input id="playAgain" type="button", value="Start Over" onclick="history.go(0)">
-
-            <a href="./round2.html", id="nextRound"><button>Play Next Round</button></a>
-        </section>
+        <div class="smallBtnsDiv">
+            <input onclick="conditional(), showCpuMove(), showPDiv(), showScore1(), showNextRound(), showPlayAgain()" , 
+            id="resultButton" type="button" value="Click To View Results">
+            <button id="playAgain" onclick="history.go(0)">Start Over</button>
+            <a href="./round2.html"><button id="nextRound">Play Next Round</button></a>
+        </div>
     </div>
 </main>
 
 <footer>
     <p>
-        Tomas Maldonado 2022
+        Tomás Maldonado 2022
     </p>
 </footer>
 </body>

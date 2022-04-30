@@ -51,9 +51,9 @@ function computerMove(){
 
 //
 
-function popNoSelection(){
+/*function popNoSelection(){
     document.getElementById("humanSelection").innerHTML = "No option selected."
-};
+};*/
 
 
 function popRock(){

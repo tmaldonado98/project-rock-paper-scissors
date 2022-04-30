@@ -14,8 +14,6 @@ $smallFontWeight: font-weight (555);
 $rpsButtons: width 20px;
 
 $boxBorderWidth: width 22px; 
-$boxBorderColor: border-color white;
-$boxBackgroundColor: background-color rgba(0, 0, 0, 0.0);
 
 $smallFontSize: font-size 24px;
 
@@ -44,7 +42,7 @@ body {
 .mainDiv{
     background-image: url("../../../generalImages/image4.jpg");
     background-color: black;
-    padding: 0em 10em 2.65em 10em;
+    padding: 0em 10em 0em 10em;
     background-position:center;
     background-size: cover;
     position: relative;
@@ -60,7 +58,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 2em;
+    padding-top: 0em;
     color: rgb(76, 72, 67);
 }
 
@@ -88,11 +86,21 @@ body {
 
 .cumulScoreBox {
     position: absolute;
-    float: left;
-    margin: 0;
-    top: 2em; 
+    top: 2rem; 
     max-width: fit-content;
-    font-size: 22px;
+    display: flex;
+    min-width: 30%;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    color: rgb(76, 72, 67);
+}
+
+#cumulScoreHum, #cumulScoreCPU {
+    color: rgb(76, 72, 67);
 }
 
 .buttonsDiv {
@@ -119,21 +127,9 @@ body {
         justify-content: start;
         align-items: center;
         box-shadow: 10px 14px 14px  rgba(0, 0, 0, 0.6);
+
+        z-index: 7;
         }
-        
-    /*#rock p, #paper p, #scissor p {
-        opacity: 0;
-        width: 4.5em;
-        border: 2px thin black;
-        background-color: rgba(222, 151, 80, 0.604);
-        box-shadow: 2px 2px 5px 5px black;
-        padding: 0;
-        margin: 0, auto;
-        color: rgb(76, 72, 67);
-        font-family: 'Merienda', 'Impact', 'Georgia';
-        font-size: 45px;  
-        font-weight: bolder; 
-    }*/
 
     #rockImg{
         margin: auto;
@@ -155,10 +151,6 @@ body {
     }
     
     #rock:hover, #paper:hover, #scissor:hover {
-        /*#rock p, #paper p, #scissor p {
-            transition-duration: 500ms;
-            opacity: 1;
-        }*/
         transition-duration: 650ms;
         border-width: 19px;
         border-color: rgba(76, 72, 67, 0.954);
@@ -169,41 +161,100 @@ body {
             opacity: 1;
         }
     }
+//
+//
+#resultDivBox {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: antiquewhite;
+    width: fit-content;
+    margin-left:auto;
+    margin-right: auto;
+    position: absolute;
+    top: 28%;
+    left: 0;
+    right: 0;
+
+    #round-result {
+        text-shadow: 2em 2em 2em 2em black;
+    }
+}
 
 #textAndButtons {
     position: absolute;
     top: 0;
-    margin-bottom: 70%;
-
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 50%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+   // margin-top: 5rem;
+    padding-top: 2rem;
     
-    #yrSel {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    z-index: 5;
+
+    #humAndCpuSelBox {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-width: 75%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+
         font-family: $smallFontFam;
-        font-size: 18px;
         color:azure;
     }
-    #humanSelection{
-        font-family: $smallFontFam;
-        font-size: 30px;
-        color:azure;
+    #yrSel, #pDiv {
+        font-size: 25px;
     }
- 
-    #cpu-selection{
-        @extend #humanSelection;
-    }
-    #round-result{
-        color: $headerColor;
+    #humanSelection, #cpu-selection {
+        font-size: 40px;
     }
 }
 
-/*    #playAgain{
-    @extend #button;
+.smallBtnsDiv {
+    display: flex;    
+    justify-content: space-between;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
 }
 
+#resultButton, #playAgain, #nextRound {
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 19rem;
+    font-size: 23px;
+    padding: 8px;
+    height: 100px;
+    font-family: $smallFontFam;
+    font-weight: 590;
+    color: rgb(76, 72, 67);    
+    
+    box-shadow: 5px 7px 7px  rgba(0, 0, 0, 0.6);
+    border-color: rgba(248, 241, 231, 0.316);
+    border-width: 4px;
+}
 
-#nextRound{
-    @extend #button;
-}*/
-
+#resultButton:hover, #playAgain:hover, #nextRound:hover {
+    transition-duration: 650ms;
+    border-color: rgba(53, 53, 52, 0.749);
+    border-width: 8px;
+    font-size: 27px;
+}
 
 footer {
     display: flex;
@@ -212,6 +263,7 @@ footer {
     height: 60px;
     font-size: 16px;
     font-weight: bold;
+    margin:0;
 }
 
 footer p {

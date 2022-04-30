@@ -22,7 +22,7 @@ body {
 .mainDiv {
   background-image: url("../../../generalImages/image4.jpg");
   background-color: black;
-  padding: 0em 10em 2.65em 10em;
+  padding: 0em 10em 0em 10em;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -47,7 +47,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 2em;
+  padding-top: 0em;
   color: #4c4843;
 }
 
@@ -73,13 +73,27 @@ body {
 
 .cumulScoreBox {
   position: absolute;
-  float: left;
-  margin: 0;
-  top: 2em;
+  top: 2rem;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 30%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+  color: #4c4843;
+}
+
+#cumulScoreHum, #cumulScoreCPU {
+  color: #4c4843;
 }
 
 .buttonsDiv {
@@ -123,21 +137,9 @@ body {
           align-items: center;
   -webkit-box-shadow: 10px 14px 14px rgba(0, 0, 0, 0.6);
           box-shadow: 10px 14px 14px rgba(0, 0, 0, 0.6);
+  z-index: 7;
 }
 
-/*#rock p, #paper p, #scissor p {
-        opacity: 0;
-        width: 4.5em;
-        border: 2px thin black;
-        background-color: rgba(222, 151, 80, 0.604);
-        box-shadow: 2px 2px 5px 5px black;
-        padding: 0;
-        margin: 0, auto;
-        color: rgb(76, 72, 67);
-        font-family: 'Merienda', 'Impact', 'Georgia';
-        font-size: 45px;  
-        font-weight: bolder; 
-    }*/
 #rockImg, #paperImg, #scissorImg {
   margin: auto;
   width: 40%;
@@ -160,10 +162,6 @@ body {
 }
 
 #rock:hover, #paper:hover, #scissor:hover {
-  /*#rock p, #paper p, #scissor p {
-            transition-duration: 500ms;
-            opacity: 1;
-        }*/
   -webkit-transition-duration: 650ms;
           transition-duration: 650ms;
   border-width: 19px;
@@ -177,36 +175,127 @@ body {
   opacity: 1;
 }
 
+#resultDivBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  color: antiquewhite;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 28%;
+  left: 0;
+  right: 0;
+}
+
+#resultDivBox #round-result {
+  text-shadow: 2em 2em 2em 2em black;
+}
+
 #textAndButtons {
   position: absolute;
   top: 0;
-  margin-bottom: 70%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 5;
 }
 
-#textAndButtons #yrSel {
+#textAndButtons #humAndCpuSelBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-width: 75%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
   font-family: font-family "Merienda", "Impact", "Georgia";
-  font-size: 18px;
   color: azure;
+}
+
+#textAndButtons #yrSel, #textAndButtons #pDiv {
+  font-size: 25px;
 }
 
 #textAndButtons #humanSelection, #textAndButtons #cpu-selection {
+  font-size: 40px;
+}
+
+.smallBtnsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+}
+
+#resultButton, #playAgain, #nextRound {
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 19rem;
+  font-size: 23px;
+  padding: 8px;
+  height: 100px;
   font-family: font-family "Merienda", "Impact", "Georgia";
-  font-size: 30px;
-  color: azure;
+  font-weight: 590;
+  color: #4c4843;
+  -webkit-box-shadow: 5px 7px 7px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 7px 7px rgba(0, 0, 0, 0.6);
+  border-color: rgba(248, 241, 231, 0.316);
+  border-width: 4px;
 }
 
-#textAndButtons #round-result {
-  color: white;
+#resultButton:hover, #playAgain:hover, #nextRound:hover {
+  -webkit-transition-duration: 650ms;
+          transition-duration: 650ms;
+  border-color: rgba(53, 53, 52, 0.749);
+  border-width: 8px;
+  font-size: 27px;
 }
 
-/*    #playAgain{
-    @extend #button;
-}
-
-
-#nextRound{
-    @extend #button;
-}*/
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,6 +305,7 @@ footer {
   height: 60px;
   font-size: 16px;
   font-weight: bold;
+  margin: 0;
 }
 
 footer p {
