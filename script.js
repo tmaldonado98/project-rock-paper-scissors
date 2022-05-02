@@ -28,8 +28,8 @@ function showYrSel(){
 
 let resultTextH = document.querySelector("#cumulScoreHum"); 
 let resultTextC = document.querySelector("#cumulScoreCPU");
-resultTextH.style.color = "white";
-resultTextC.style.color = "white";
+//resultTextH.style.color = "white";
+//resultTextC.style.color = "white";
 
 //
 let moves = ["Rock", "Paper", "Scissor"]; 
@@ -59,25 +59,50 @@ function computerMove(){
 function popRock(){
     document.getElementById("humanSelection").innerHTML = "Rock",
     document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
-    document.querySelector("header").setAttribute("style","visibility:hidden"),
-    document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
+    showButton(),
+    clickAddClass();
+    //document.querySelector("header").setAttribute("style","visibility:hidden"),
+    //document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 
 
 function popPaper(){
     document.getElementById("humanSelection").innerHTML = "Paper",
-    document.getElementById("yrSel").setAttribute("style", "visibility:visible");
-    document.querySelector("header").setAttribute("style","visibility:hidden"),
-    document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
+    document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
+    showButton(),
+    clickAddClass();
+    //document.querySelector("header").setAttribute("style","visibility:hidden"),
+   // document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 
 
 function popScissor(){
     document.getElementById("humanSelection").innerHTML = "Scissor",
-    document.getElementById("yrSel").setAttribute("style", "visibility:visible");
-    document.querySelector("header").setAttribute("style","visibility:hidden"),
-    document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
+    document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
+    showButton(),
+    clickAddClass();
+    //document.querySelector("header").setAttribute("style","visibility:hidden"),
+    //document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
+
+function clickAddClass() {
+    let fade = document.querySelector(".scissor");
+    let fade2 = document.querySelector(".paper");
+    let fade3 = document.querySelector(".rock");
+    fade.classList.toggle("fadeOut");
+    fade2.classList.toggle("fadeOut");
+    fade3.classList.toggle("fadeOut");
+
+    let fade4 = document.querySelector("header");
+    fade4.classList.toggle("fadeOut");
+    document.querySelector(".buttonsDiv").setAttribute("style", "visibility:hidden");
+}
+
+
+/*if(document.querySelector(".rock" || ".paper" || ".scissor")== opacity: 0;){
+
+}*/
+
 //
 
 

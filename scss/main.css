@@ -12,6 +12,7 @@ body {
   width: 100%;
   height: 60px;
   position: absolute;
+  left: 0;
   text-align: right;
   padding-top: 7px;
 }
@@ -53,6 +54,10 @@ body {
   position: relative;
 }
 
+header {
+  margin: 0 20% 0 20%;
+}
+
 .headerDiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,8 +72,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 3em;
+  padding-top: 2em;
   color: #4c4843;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
 }
 
 .headerDiv h1, .headerDiv h2 {
@@ -89,6 +96,66 @@ body {
 .headerDiv h3 {
   margin-top: 0;
   font-size: 30px;
+}
+
+@-webkit-keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  opacity: 1;
 }
 
 .cumulScoreBox {
@@ -135,12 +202,15 @@ body {
           align-items: center;
   outline: none;
   margin-top: 3rem;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
 }
 
-#rock, #paper, #scissor {
+/*.buttonsDiv.active {
+    animation: fadeOut 7s;
+}*/
+.rock, .paper, .scissor {
   background-color: transparent;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
   width: 400px;
   height: 350px;
   border-width: 10px;
@@ -164,7 +234,7 @@ body {
   z-index: 7;
 }
 
-#rockImg, #paperImg, #scissorImg {
+.rockImg, .paperImg, .scissorImg {
   margin: auto;
   width: 40%;
   -webkit-box-pack: center;
@@ -176,16 +246,16 @@ body {
   opacity: 0;
 }
 
-#paperImg, #scissorImg {
+.paperImg, .scissorImg {
   height: auto;
 }
 
-#scissorImg {
+.scissorImg {
   height: 50%;
   width: 50%;
 }
 
-#rock:hover, #paper:hover, #scissor:hover {
+.rock:hover, .paper:hover, .scissor:hover {
   -webkit-transition-duration: 650ms;
           transition-duration: 650ms;
   border-width: 19px;
@@ -193,7 +263,7 @@ body {
   border-style: double;
 }
 
-#rock:hover #rockImg, #rock:hover #paperImg, #rock:hover #scissorImg, #rock:hover #paperImg, #rock:hover #scissorImg, #rock:hover #scissorImg, #paper:hover #rockImg, #paper:hover #paperImg, #paper:hover #scissorImg, #paper:hover #paperImg, #paper:hover #scissorImg, #paper:hover #scissorImg, #scissor:hover #rockImg, #scissor:hover #paperImg, #scissor:hover #scissorImg, #scissor:hover #paperImg, #scissor:hover #scissorImg, #scissor:hover #scissorImg {
+.rock:hover .rockImg, .rock:hover .paperImg, .rock:hover .scissorImg, .rock:hover .paperImg, .rock:hover .scissorImg, .rock:hover .scissorImg, .paper:hover .rockImg, .paper:hover .paperImg, .paper:hover .scissorImg, .paper:hover .paperImg, .paper:hover .scissorImg, .paper:hover .scissorImg, .scissor:hover .rockImg, .scissor:hover .paperImg, .scissor:hover .scissorImg, .scissor:hover .paperImg, .scissor:hover .scissorImg, .scissor:hover .scissorImg {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   opacity: 1;
