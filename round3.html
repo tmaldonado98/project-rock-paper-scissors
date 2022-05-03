@@ -2,67 +2,95 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-
+        <title>Rock, Paper, Scissor</title>
+        <meta name="description" content="Round 3">
+        <meta name="author" content="Tomas Maldonado">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./scss/main3.css">
         <script src="script3.js" defer></script>
+        <link rel="icon" href="../../general icons/monkey icon.png">
     </head>
 
 <body>
-    <header>
-        <h1>Rock, Paper, Scissor</h1>
-        <h2>The best of 3 rounds wins</h2><br>
-        <h3>Round 3</h3>
-    </header>
-   
-    <form>
-        <button type="button" onclick="popRock(), showButton()" id="rock">Rock</button>
-        <button type="button" onclick="popPaper(), showButton()" id="paper">Paper</button>
-        <button type="button" onclick="popScissor(), showButton()" id="scissor">Scissor</button>
+    <div class="mainDiv"> 
+            <ul id="contactBar">
+                <li id="liP">Contact Me</li>
+                <li id="github"><a href="https://github.com/tmaldonado98", 
+                    target="blank"><img src="../../general icons/github icon.png">
+                    </a></li>
+                <li id="email"><a href="mailto: tmaldonadotrs@gmail.com",
+                    target="blank"><img src="../../general icons/mail icon.png"> 
+                    </a></li>
+                <li id="ig"><a href="https://www.instagram.com/tomas.m.98/",
+                    target="blank"><img src="../../general icons/instagram icon.png"> 
+                    </a></li>                    
+            </ul>
+                                
+        <div class="cumulScoreBox">
+            <h4 id="cumulScoreHum"></h4>
+            <h4 id="cumulScoreCPU"></h4>
+        </div>
 
-            
-           <!-- <select onclick="cpuMove, console.log(cpuMove)" id="form">
-                <option onclick="popNoSelection()" id="none">Select an option.</option>
-                <option </option>
-                <option </option>
-                <option </option>
-            </select>-->
-        <p>Your selection: </p> 
-        <h4 id="humanSelection"></h4>
-    <br>
-    
-        
-        <div id="pDiv">
-            <p>CPU's selection: </p>
+        <div id="resultDivBox">
+            <h2 id="round-result"></h2>
+            <h1 id="announceScore"></h1>
         </div> 
-        <h4 id="cpu-selection"></h4> 
-     
-    
-    <br>
-    <br>
-    <br>
 
-    
-    <input onclick="conditional(), showCpuMove(), showPlayAgain(), showPDiv(), showScore3()" , 
-    id="button" type="button" value="Click to view results."></input>
-    <h4 id="resultText"></h4>
-    </form>
-
-    <h2 id="round-result"></h2>
-<br>
-<a href="index.html", id="playAgain"><button>Start Over</button></a>
-
-<br>
+        <header>
+            <div class="headerDiv">
+                <h1>Rock, Paper, Scissor</h1>
+                <h2>The best of 3 rounds wins</h2>
+                <h3>Round 3</h3>
+            </div>
+        </header>
 
 
-<h4 id="cumulScoreHum"></h4>
-<h4 id="cumulScoreCPU"></h4>
+        <main>
 
+        <section>    
+                <div class="buttonsDiv">
+                    <button type="button" onclick="popRock()" class="rock">
+                        <img src="./images/rock48.png", class="rockImg"></button>
+                    <button type="button" onclick="popPaper()" class="paper">
+                        <img src="./images/paper transparent background.gif", class="paperImg"></button>
+                    <button type="button" onclick="popScissor()" class="scissor">
+                    <img src="./images/scissor ransarentak.gif", class="scissorImg"></button>
+                </div>
+                <br>        
+                <br>
+        </section>
 
-<h1 id="announceScore"></h1>
+        <section id="textAndButtons">
+            <div id="humAndCpuSelBox">
+                
+                <div class="humSelBox">
+                    <p id="yrSel">Your selection: </p> 
+                    <h4 id="humanSelection"></h4>
+                </div>
+            
+                <div class="cpuSelBox">
+                    <div id="pDiv">
+                        <p>CPU's selection: </p>
+                    </div> 
+                    <h4 id="cpu-selection"></h4>
+                </div>
+            </div>
+        </section>  
 
-<script>
-    
+        <div class="smallBtnsDiv">
+            <input onclick="conditional(), showCpuMove(), showPDiv(), showScore3(), showPlayAgain()" , 
+            id="resultButton" type="button" value="Click To View Results">
+            
+            <a href="./index.html"><button id="playAgain" >Start Over</button></a>
+        </div>
+    </div>
+</main>
 
-    </script>
+<footer>
+    <p>
+        Tomás Maldonado 2022
+    </p>
+</footer>
 
 </body>
 </html>

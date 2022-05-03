@@ -1,12 +1,11 @@
-document.getElementById("button").setAttribute("style","visibility:hidden");
+document.getElementById("resultButton").setAttribute("style","visibility:hidden");
 document.getElementById("pDiv").setAttribute("style","visibility:hidden");
 document.getElementById("playAgain").setAttribute("style", "visibility:hidden");
 
+document.getElementById("yrSel").setAttribute("style", "visibility:hidden");
+
 let round2ScoreHum = "Player: " + sessionStorage.getItem('scoreBHum');
 let round2ScoreCPU = "CPU: " + sessionStorage.getItem('scoreBCpu');
-
-document.getElementById("cumulScoreHum").innerHTML = round2ScoreHum;
-document.getElementById("cumulScoreCPU").innerHTML = round2ScoreCPU;
 
 /*document.getElementById("endSeriesPl").setAttribute("style", "visibility:hidden");
 document.getElementById("endSeriesCpu").setAttribute("style", "visibility:hidden");
@@ -14,7 +13,7 @@ document.getElementById("stalemate").setAttribute("style", "visibility:hidden");
 
 
 function showButton(){
-    document.getElementById("button").setAttribute("style","visibility:visible");
+    document.getElementById("resultButton").setAttribute("style","visibility:visible");
 }
 
 function showPDiv(){
@@ -44,26 +43,41 @@ function computerMove(){
 
 
 //
-function popNoSelection(){
-    document.getElementById("humanSelection").innerHTML = "No option selected."
-};
-
-
 function popRock(){
-    document.getElementById("humanSelection").innerHTML = "Rock"
+    document.getElementById("humanSelection").innerHTML = "Rock",
+    document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
+    showButton(),
+    clickAddClass();
 };
 
 
 function popPaper(){
-    document.getElementById("humanSelection").innerHTML = "Paper"
+    document.getElementById("humanSelection").innerHTML = "Paper",
+    document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
+    showButton(),
+    clickAddClass();
 };
 
 
 function popScissor(){
-    document.getElementById("humanSelection").innerHTML = "Scissor"
+    document.getElementById("humanSelection").innerHTML = "Scissor",
+    document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
+    showButton(),
+    clickAddClass();
 };
-//
 
+function clickAddClass() {
+    let fade = document.querySelector(".scissor");
+    let fade2 = document.querySelector(".paper");
+    let fade3 = document.querySelector(".rock");
+    fade.classList.toggle("fadeOut");
+    fade2.classList.toggle("fadeOut");
+    fade3.classList.toggle("fadeOut");
+
+    let fade4 = document.querySelector("header");
+    fade4.classList.toggle("fadeOut");
+    document.querySelector(".buttonsDiv").setAttribute("style", "visibility:hidden");
+}
 
 //
 let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor beats paper!", "Stalemate!"];
@@ -148,7 +162,7 @@ function cpuWinsSeries(){
 }
 
 function stalemateSeries(){
-    return document.getElementById("announceScore").innerHTML = "Stalemate! No winner declared"
+    return document.getElementById("announceScore").innerHTML = "Stalemate! No winner declared."
 }
 
 //

@@ -225,23 +225,35 @@ header {
 //
 #resultDivBox {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     font-size: 25px;
     color: antiquewhite;
-    width: fit-content;
+    width: 50%;
     margin-left:auto;
     margin-right: auto;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     position: absolute;
-    top: 28%;
+    top: 25%;
     left: 0;
     right: 0;
 
     #round-result {
         text-shadow: 2px 2px rebeccapurple;
     }
+
+    #endSeriesPl, #endSeriesCpu {
+        text-shadow: 4px 2px rebeccapurple;
+    }
 }
 
+/*#endSeriesText {
+    width: fit-content;
+    height: 50px;
+    margin: 0 auto;
+}
+*/
 #textAndButtons {
     position: absolute;
     top: 0;
@@ -274,6 +286,7 @@ header {
         margin-left: auto;
         margin-right: auto;
         margin-top: 2rem;
+        padding-top: 4rem;
 
         font-family: $smallFontFam;
         color:antiquewhite;

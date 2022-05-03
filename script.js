@@ -26,8 +26,8 @@ function showYrSel(){
 
 }
 
-let resultTextH = document.querySelector("#cumulScoreHum"); 
-let resultTextC = document.querySelector("#cumulScoreCPU");
+//let resultTextH = document.querySelector("#cumulScoreHum"); 
+//let resultTextC = document.querySelector("#cumulScoreCPU");
 //resultTextH.style.color = "white";
 //resultTextC.style.color = "white";
 
@@ -51,18 +51,11 @@ function computerMove(){
 
 //
 
-/*function popNoSelection(){
-    document.getElementById("humanSelection").innerHTML = "No option selected."
-};*/
-
-
 function popRock(){
     document.getElementById("humanSelection").innerHTML = "Rock",
     document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
     showButton(),
     clickAddClass();
-    //document.querySelector("header").setAttribute("style","visibility:hidden"),
-    //document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 
 
@@ -71,8 +64,6 @@ function popPaper(){
     document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
     showButton(),
     clickAddClass();
-    //document.querySelector("header").setAttribute("style","visibility:hidden"),
-   // document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 
 
@@ -81,8 +72,6 @@ function popScissor(){
     document.getElementById("yrSel").setAttribute("style", "visibility:visible"),
     showButton(),
     clickAddClass();
-    //document.querySelector("header").setAttribute("style","visibility:hidden"),
-    //document.querySelector(".buttonsDiv").setAttribute("style","visibility:hidden");
 };
 
 function clickAddClass() {
@@ -98,13 +87,7 @@ function clickAddClass() {
     document.querySelector(".buttonsDiv").setAttribute("style", "visibility:hidden");
 }
 
-
-/*if(document.querySelector(".rock" || ".paper" || ".scissor")== opacity: 0;){
-
-}*/
-
 //
-
 
 //
 let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor beats paper!", "Stalemate!"];
