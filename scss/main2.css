@@ -269,6 +269,24 @@ header {
   opacity: 1;
 }
 
+@-webkit-keyframes announceTEffect {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes announceTEffect {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 #resultDivBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,6 +318,13 @@ header {
 
 #resultDivBox #endSeriesPl, #resultDivBox #endSeriesCpu {
   text-shadow: 4px 2px rebeccapurple;
+}
+
+#endSeriesPl, #endSeriesCpu {
+ text-align: center;
+ margin-top: 0;
+  -webkit-animation: announceTEffect 800ms ease-in-out infinite;
+  animation: announceTEffect 800ms ease-in-out infinite;
 }
 
 /*#endSeriesText {
@@ -364,6 +389,7 @@ header {
 
 #humAndCpuSelBox {
   position: relative;
+  bottom: -10vh;
 }
 
 
@@ -389,6 +415,8 @@ header {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2rem;
+  position: relative;
+  bottom: -5vh;
 }
 
 #resultButton, #playAgain, #nextRound {

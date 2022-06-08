@@ -366,7 +366,8 @@ function stalemateSeries(){
         document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove == "Scissor"){
             sessionStorage.setItem('scoreCHum', 0),
             sessionStorage.setItem('scoreCCpu', 1),
-            document.getElementById("endSeriesCpu").setAttribute("style", "visibility:visible");
+            cpuWinsSeries ();
+            //document.getElementById("endSeriesCpu").setAttribute("style", "visibility:visible");
         }
         
         else if(sessionStorage.getItem('scoreAHum') == 0 && sessionStorage.getItem('scoreACpu') == 1 && 
@@ -380,7 +381,7 @@ function stalemateSeries(){
         document.getElementById("humanSelection").innerHTML == "Scissor" && cpuMove == "Rock"){
             sessionStorage.setItem('scoreCHum', 1),
             sessionStorage.setItem('scoreCCpu', 2),
-            cpuWinsSeries()
+            cpuWinsSeries();
         }
         
         else if(sessionStorage.getItem('scoreAHum') == 1 && sessionStorage.getItem('scoreACpu') == 0 && 
