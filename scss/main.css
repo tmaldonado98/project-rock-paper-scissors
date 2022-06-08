@@ -347,6 +347,11 @@ header {
   color: antiquewhite;
 }
 
+#humAndCpuSelBox {
+  position: relative;
+  bottom: -5vh;
+}
+
 #textAndButtons #yrSel, #textAndButtons #pDiv {
   font-size: 25px;
   color: #4c4843;
