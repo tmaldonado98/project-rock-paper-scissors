@@ -292,6 +292,7 @@ header {
 
 #resultDivBox #round-result {
   text-shadow: 2px 2px rebeccapurple;
+  text-align: center;
 }
 
 #textAndButtons {
@@ -349,7 +350,6 @@ header {
 
 #humAndCpuSelBox {
   position: relative;
-  bottom: -5vh;
 }
 
 #textAndButtons #yrSel, #textAndButtons #pDiv {

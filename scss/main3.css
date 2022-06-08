@@ -313,6 +313,7 @@ header {
 
 #resultDivBox #round-result {
   text-shadow: 2px 2px rebeccapurple;
+  text-align: center;
 }
 
 #resultDivBox #announceScore {
@@ -384,7 +385,7 @@ header {
 
 #humAndCpuSelBox {
   position: relative;
-  bottom: -5vh;
+  bottom: -10vh;
 }
 
 #textAndButtons #yrSel, #textAndButtons #pDiv {
@@ -409,6 +410,8 @@ header {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2rem;
+  position: relative;
+  bottom: -5vh;
 }
 
 #resultButton, #playAgain, #nextRound {

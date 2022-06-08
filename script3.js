@@ -80,7 +80,7 @@ function clickAddClass() {
 }
 
 //
-let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor beats paper!", "Stalemate!"];
+let possibleOutcomes = ["Rock beats scissors!", "Paper beats rock!", "Scissor beats paper!", "Round stalemate!"];
 
         
 function one(){
@@ -162,7 +162,7 @@ function cpuWinsSeries(){
 }
 
 function stalemateSeries(){
-    return document.getElementById("announceScore").innerHTML = "Stalemate! No winner declared."
+    return document.getElementById("announceScore").innerHTML = "Series tied! No winner declared."
 }
 
 //

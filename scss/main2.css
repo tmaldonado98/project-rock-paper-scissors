@@ -295,6 +295,7 @@ header {
 
 #resultDivBox #round-result {
   text-shadow: 2px 2px rebeccapurple;
+  text-align: center;
 }
 
 #resultDivBox #endSeriesPl, #resultDivBox #endSeriesCpu {
@@ -363,7 +364,6 @@ header {
 
 #humAndCpuSelBox {
   position: relative;
-  bottom: -5vh;
 }
 
 
