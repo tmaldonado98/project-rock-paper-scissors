@@ -21,6 +21,11 @@ function showNextRound (){
     document.getElementById("nextRound").setAttribute("style", "visibility:visible");
 }
 
+/*function goToNextRound (){
+    document.getElementById("nextRound").addEventListener("click", );
+
+}*/
+
 function showYrSel(){
     document.getElementById("yrSel").setAttribute("style", "visibility:visible");
 
